@@ -1,0 +1,41 @@
+site_name: AI Engineering Workflow
+site_description: Portable Markdown governance for AI-assisted engineering review.
+repo_url: ""
+exclude_docs: |
+theme:
+  name: mkdocs
+nav:
+  - Start Here: start.md
+  - Session Starter: session_starter_template.md
+  - Wiki Index: index.md
+  - Concepts:
+      - Overview: concepts/Overview.md
+      - Workflow Model: concepts/Workflow_Model.md
+      - Operational Principles: concepts/Operational_Principles.md
+      - State Definitions: concepts/State_Definitions.md
+      - Severity Definitions: concepts/Severity_Definitions.md
+      - Scope Freeze: concepts/Scope_Freeze.md
+      - Gate Model: concepts/Gate_Model.md
+      - Context Management: concepts/Context_Management.md
+      - Artifact Structure: concepts/Artifact_Structure.md
+  - Governance:
+      - Governance Model: governance/Governance_Model.md
+      - Human Authority Model: governance/Human_Authority_Model.md
+      - AI Agent Instructions: governance/AI_Agent_Instructions.md
+  - Templates:
+      - Workflow Record Template: workflow-templates/AI_Workflow_Record_Template.md
+      - Workflow Record Update Instructions: workflow-templates/AI_Workflow_Record_Update_Instructions.md
+      - Decision Log Template: workflow-templates/Decision_Log_Template.md
+      - AI Handoff Template: workflow-templates/AI_Handoff_Template.md
+      - CLAUDE.md Project Template: workflow-templates/CLAUDE_md_Project_Template.md
+      - AGENTS.md Project Template: workflow-templates/AGENTS_md_Project_Template.md
+  - Examples:
+      - Examples README: examples/README.md
+      - Publication Workflow Record: WorkflowRecords/2026-05-08_publish_ai_engineering_workflow.md
+  - Historical Source:
+      - Genesis Workflow Record: raw/AI_Workflow_Record_v1_2.md
+      - Concept Explanation: raw/AI_Workflow_Concept_Explanation_v1_2.md
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
