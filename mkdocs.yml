@@ -1,6 +1,7 @@
 site_name: AI Engineering Workflow
 site_description: Portable Markdown governance for AI-assisted engineering review.
-repo_url: ""
+site_url: https://jwcolby54.github.io/AI_Engineering_Workflow_Wiki/
+repo_url: https://github.com/jwcolby54/AI_Engineering_Workflow_Wiki
 exclude_docs: |
 theme:
   name: mkdocs
