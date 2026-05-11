@@ -26,13 +26,15 @@ If role is unclear, ask before continuing.
    - Created/Revised: current date
    - AI_1 and AI_2 names if known
    - Change Summary
-4. Fill Objective, Current State, Human Requirements, Constraints, and Next Action.
-5. Do not fill implementation gate approval until review and scope freeze happen.
+4. Fill the Resume Snapshot with the current phase, current round, next actor, and next action.
+5. Fill Objective, Current State, Human Requirements, Constraints, and Next Action.
+6. Do not fill implementation gate approval until review and scope freeze happen.
 
 ## 4. Resume An Existing Record
 
 Read the full record and report:
 
+- Resume Snapshot fields and links
 - Header status and document version
 - Current round and latest completed section
 - Open `BLOCKING` or `MAJOR` concerns
@@ -73,4 +75,3 @@ Implementation may begin only when the Workflow Record shows:
 - AI_2 decision is approved or human has explicitly waived remaining `MAJOR` concerns
 - Human decision is approved
 - Gate Status is cleared
-

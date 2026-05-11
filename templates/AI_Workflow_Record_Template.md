@@ -10,6 +10,26 @@
 
 ---
 
+# Resume Snapshot
+
+**Current Phase:** [Proposal / Critique / Revision / Final Review / Scope Freeze / Gate / Implementation / Validation]
+**Current Round:** [Round 1]
+**Open Concerns:** [None / summary of unresolved BLOCKING or MAJOR concerns]
+**Frozen Scope:** [No / Yes - see [Scope Freeze](#6-scope-freeze)]
+**Gate Status:** [BLOCKED_PENDING_REVIEW / CLEARED / other - see [Implementation Gate](#7-implementation-gate)]
+**Next Actor:** [AI_1 / AI_2 / Human]
+**Next Action:** [One sentence]
+
+**Resume Reading Order:**
+1. [Objective](#1-objective)
+2. [Human Requirements](#3-human-requirements)
+3. [Design Review Loop](#5-design-review-loop)
+4. [Scope Freeze](#6-scope-freeze)
+5. [Implementation Gate](#7-implementation-gate)
+6. [Next Action](#10-next-action)
+
+---
+
 # 1. Objective
 
 [What engineering decision or design is being worked out in this session? Be specific enough that both AIs can evaluate proposals against it.]

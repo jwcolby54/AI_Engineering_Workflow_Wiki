@@ -67,6 +67,13 @@ def create_record(args: argparse.Namespace, wiki_root: Path) -> Path:
     text = text.replace("[Claude / ChatGPT / Codex / other]", args.ai1, 1)
     text = text.replace("[Claude / ChatGPT / Codex / other]", args.ai2, 1)
     text = text.replace("[One-line session description]", args.topic)
+    text = text.replace("[Proposal / Critique / Revision / Final Review / Scope Freeze / Gate / Implementation / Validation]", "Proposal")
+    text = text.replace("[Round 1]", "Round 1")
+    text = text.replace("[None / summary of unresolved BLOCKING or MAJOR concerns]", "None yet")
+    text = text.replace("[No / Yes - see [Scope Freeze](#6-scope-freeze)]", "No")
+    text = text.replace("[BLOCKED_PENDING_REVIEW / CLEARED / other - see [Implementation Gate](#7-implementation-gate)]", "BLOCKED_PENDING_REVIEW")
+    text = text.replace("[AI_1 / AI_2 / Human]", args.role)
+    text = text.replace("[One sentence]", f"{args.role} should draft the initial proposal for {args.topic}.")
     text = text.replace(
         "[What engineering decision or design is being worked out in this session? Be specific enough that both AIs can evaluate proposals against it.]",
         args.objective or f"Define and review the engineering approach for {args.topic}.",

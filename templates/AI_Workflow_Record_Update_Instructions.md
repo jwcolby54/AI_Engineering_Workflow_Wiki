@@ -14,6 +14,12 @@ Use timestamps at handoff points. Prefer `YYYY-MM-DD HH:MM TZ` using the Human's
 
 ## What To Update And When
 
+### At every handoff or state change
+
+- Update the Resume Snapshot near the top of the record.
+- Keep `Current Phase`, `Current Round`, `Open Concerns`, `Frozen Scope`, `Gate Status`, `Next Actor`, and `Next Action` current.
+- Use the snapshot links as the preferred pickup path for a cold AI. Do not use line-number links because line numbers change whenever the record is edited.
+
 ### When you produce a proposal (AI_1)
 
 - Add a new Round section, or use Round 1 if first.
