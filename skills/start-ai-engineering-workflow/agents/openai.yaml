@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start AI Engineering Workflow"
+  short_description: "Bootstrap workflow records and AI handoffs"
+  default_prompt: "Use $start-ai-engineering-workflow to start or resume an AI Engineering Workflow session."
