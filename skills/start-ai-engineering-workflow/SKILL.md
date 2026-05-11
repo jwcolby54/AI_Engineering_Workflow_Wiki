@@ -41,6 +41,12 @@ Prefer the helper script when starting a project or record. For a human-friendly
 python E:\AI\AI_Engineering_Workflow_Wiki\skills\start-ai-engineering-workflow\scripts\workflow_bootstrap.py
 ```
 
+On Windows, use the repo wrapper instead:
+
+```powershell
+E:\AI\AI_Engineering_Workflow_Wiki\StartAWorkflow.bat
+```
+
 It asks for the project root, workflow purpose, short topic, bootstrap files, AI role, and whether to print a second-AI starter.
 
 For scripted use, pass the values directly:
