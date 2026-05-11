@@ -6,7 +6,6 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import re
-import shutil
 from pathlib import Path
 
 
@@ -118,9 +117,61 @@ Requirements:
 - Human remains final authority."""
 
 
+def ask(prompt: str, default: str | None = None) -> str:
+    suffix = f" [{default}]" if default else ""
+    while True:
+        value = input(f"{prompt}{suffix}: ").strip()
+        if value:
+            return value
+        if default is not None:
+            return default
+        print("Please enter a value.")
+
+
+def ask_choice(prompt: str, choices: set[str], default: str) -> str:
+    choice_list = "/".join(sorted(choices))
+    while True:
+        value = ask(f"{prompt} ({choice_list})", default).lower()
+        if value in choices:
+            return value
+        print(f"Please choose one of: {choice_list}")
+
+
+def apply_interactive_defaults(args: argparse.Namespace) -> argparse.Namespace:
+    if args.project_root:
+        return args
+
+    print("AI Engineering Workflow bootstrap")
+    print("---------------------------------")
+    print("Press Enter to accept a value shown in brackets.\n")
+
+    args.project_root = ask("What is the root directory for this project?")
+    project_name = Path(args.project_root).name
+    args.project_name = args.project_name or ask("Project name", project_name)
+    args.objective = args.objective or ask("What is the stated purpose of this Workflow?")
+    args.topic = ask("Short topic for the Workflow Record filename", slugify(args.objective).replace("_", " ")[:48].strip())
+
+    bootstrap = ask_choice("Install project bootstrap files", {"none", "agents", "claude", "both"}, "both")
+    args.install_bootstrap = args.install_bootstrap if args.install_bootstrap != "none" else bootstrap
+
+    active_role = ask_choice("Which role is this AI playing", {"ai_1", "ai_2"}, args.role.lower())
+    args.role = active_role.upper()
+
+    second_ai = ask_choice("Print a starter block for a second reviewing AI", {"yes", "no"}, "yes")
+    if second_ai == "yes":
+        args.reviewer_role = "AI_2"
+
+    overwrite = ask_choice("Overwrite existing Workflow Record if the same filename exists", {"yes", "no"}, "no")
+    args.overwrite = args.overwrite or overwrite == "yes"
+
+    overwrite_bootstrap = ask_choice("Overwrite existing AGENTS.md/CLAUDE.md if present", {"yes", "no"}, "no")
+    args.overwrite_bootstrap = args.overwrite_bootstrap or overwrite_bootstrap == "yes"
+    return args
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--project-root", required=True, help="Project/repo root for the workflow.")
+    parser.add_argument("--project-root", help="Project/repo root for the workflow. If omitted, prompts interactively.")
     parser.add_argument("--topic", default="workflow", help="Short workflow topic used for filename and title.")
     parser.add_argument("--objective", help="Objective text for a new Workflow Record.")
     parser.add_argument("--project-name", help="Project name for the record header.")
@@ -141,6 +192,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
+    args = apply_interactive_defaults(args)
     wiki_root = Path(args.wiki_root)
     if not wiki_root.exists():
         raise SystemExit(f"Wiki root not found: {wiki_root}")

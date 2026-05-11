@@ -35,7 +35,15 @@ Use one of these paths:
 
 ## Quick Scaffold
 
-Prefer the helper script when starting a project or record:
+Prefer the helper script when starting a project or record. For a human-friendly interview, run it with no arguments:
+
+```powershell
+python E:\AI\AI_Engineering_Workflow_Wiki\skills\start-ai-engineering-workflow\scripts\workflow_bootstrap.py
+```
+
+It asks for the project root, workflow purpose, short topic, bootstrap files, AI role, and whether to print a second-AI starter.
+
+For scripted use, pass the values directly:
 
 ```powershell
 python E:\AI\AI_Engineering_Workflow_Wiki\skills\start-ai-engineering-workflow\scripts\workflow_bootstrap.py `
@@ -84,4 +92,3 @@ Requirements:
 - Keep critique adversarial and explicit. Use exact severity strings: `BLOCKING`, `MAJOR`, `MINOR`, `FUTURE`.
 - Record human decisions as authoritative guidance.
 - If scope changes, stop and start a new review round.
-
