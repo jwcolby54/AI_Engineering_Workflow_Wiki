@@ -1,4 +1,4 @@
-﻿# CLAUDE.md â€” Project Template
+# CLAUDE.md — Project Template
 
 Instructions: Copy this file into the root of any project directory and rename it to `CLAUDE.md`.
 Update the wiki path if yours differs from the default below.

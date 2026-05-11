@@ -1,4 +1,4 @@
-﻿# AGENTS.md â€” Project Template
+# AGENTS.md — Project Template
 
 Instructions: Copy this file into the root of any project directory and rename it to `AGENTS.md`.
 Update the wiki path if yours differs from the default below.
@@ -10,7 +10,7 @@ in subdirectories and a global user-level ~/.codex/AGENTS.md if configured.
 ---
 
 ```markdown
-# AI Engineering Workflow â€” Agent Bootstrap
+# AI Engineering Workflow — Agent Bootstrap
 
 This project uses the structured adversarial AI engineering workflow.
 Read this file before doing anything else.
@@ -65,6 +65,6 @@ E:\AI\AI_Engineering_Workflow_Wiki\templates\AI_Workflow_Record_Template.md
 - Update the Workflow Record during the session, not at the end.
 - Do not begin implementation without a cleared implementation gate.
 - Do not silently modify frozen scope.
-- Preserve all prior rounds in the Workflow Record â€” never overwrite history.
+- Preserve all prior rounds in the Workflow Record — never overwrite history.
 ```
 
