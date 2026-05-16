@@ -2,14 +2,14 @@
 
 ## The Human Is Not a Rubber Stamp
 
-The Human operator holds structural authority at multiple points in the workflow. This is not ceremonial — it is load-bearing. The workflow degrades if the Human is treated as a passive approver at the end.
+The Human operator holds structural authority at multiple points in the workflow. This is not ceremonial - it is load-bearing. The workflow degrades if the Human is treated as a passive approver at the end.
 
 ---
 
 ## Where Human Authority Is Required
 
 ### Requirements Definition
-The Human defines what the system must do. AI systems propose how to do it. Requirements are not negotiable by AIs — they can flag conflicts or concerns, but requirements belong to the Human.
+The Human defines what the system must do. AI systems propose how to do it. Requirements are not negotiable by AIs - they can flag conflicts or concerns, but requirements belong to the Human.
 
 ### Scope Waivers
 If a `MAJOR` concern remains unresolved at the implementation gate, only the Human can grant an explicit waiver. The waiver must be recorded in the Workflow Record with a stated reason.

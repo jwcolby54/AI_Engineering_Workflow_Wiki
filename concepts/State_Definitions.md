@@ -38,6 +38,6 @@ Workflow state is recorded explicitly in the Workflow Record header and updated 
 ## Rules
 
 - No state may be skipped without explicit Human override, recorded in the Workflow Record
-- Backward transitions (e.g., `IMPLEMENT_READY` → `NEEDS_REVISION`) require a new named review round
-- `SUPERSEDED` is terminal — records in this state are archived permanently and never modified
+- Backward transitions (e.g., `IMPLEMENT_READY` -> `NEEDS_REVISION`) require a new named review round
+- `SUPERSEDED` is terminal - records in this state are archived permanently and never modified
 - The current state must always be visible in the Workflow Record header

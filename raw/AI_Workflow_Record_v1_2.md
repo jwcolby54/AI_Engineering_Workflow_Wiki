@@ -6,8 +6,8 @@
 **Reviewer:** Claude (Anthropic)
 **Adversarial Review:** ChatGPT
 **Change Summary (v1.2):**
-- Added State Transition Rules table (§5)
-- Added Scope Freeze section (§6a)
+- Added State Transition Rules table (Section5)
+- Added Scope Freeze section (Section6a)
 - Added Concern Severity levels
 - Consolidated implementation gate structure
 - Added deadlock handling
@@ -168,13 +168,13 @@ Introduce:
 
 **Workflow:**
 Human Goal
-→ AI Proposal
-→ AI Critique
-→ Revision
-→ Re-review
-→ Convergence
-→ Implementation
-→ Validation
+-> AI Proposal
+-> AI Critique
+-> Revision
+-> Re-review
+-> Convergence
+-> Implementation
+-> Validation
 
 **Status:** `READY_FOR_FINAL_REVIEW`
 
@@ -229,9 +229,9 @@ Implementation is NOT permitted until all parties approve.
 
 | Reviewer | Decision | Reason |
 |---|---|---|
-| Claude | ✅ IMPLEMENT | Workflow mature enough for implementation |
-| ChatGPT | ✅ IMPLEMENT | Governance architecture coherent |
-| Human | ⬜ PENDING | Awaiting final decision |
+| Claude | [OK] IMPLEMENT | Workflow mature enough for implementation |
+| ChatGPT | [OK] IMPLEMENT | Governance architecture coherent |
+| Human | [ ] PENDING | Awaiting final decision |
 
 **Gate Status:** `BLOCKED_PENDING_HUMAN_APPROVAL`
 
@@ -303,7 +303,7 @@ Additional findings after v1.2 review:
 - Cross-workflow references
 
 ### Important Conclusion
-The workflow is no longer “notes.”
+The workflow is no longer "notes."
 
 It is now:
 - workflow semantics
@@ -339,4 +339,4 @@ implemented as structured Markdown.
 
 ---
 
-*v1.2 — Consolidated from full Human + Claude + ChatGPT adversarial review session.*
+*v1.2 - Consolidated from full Human + Claude + ChatGPT adversarial review session.*

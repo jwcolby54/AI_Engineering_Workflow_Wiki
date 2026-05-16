@@ -6,7 +6,7 @@ This is not "multiple AIs helping write software."
 
 It is a collaborative AI-assisted systems engineering governance model. The distinguishing feature is adversarial review: one AI proposes, a second AI critiques from an independent perspective, and the result is revised until both systems converge. The human operator holds final authority throughout.
 
-The workflow produces structured Markdown artifacts — not chat logs — as its durable output. Those artifacts persist across sessions, across model changes, and across time gaps.
+The workflow produces structured Markdown artifacts - not chat logs - as its durable output. Those artifacts persist across sessions, across model changes, and across time gaps.
 
 ## Why It Exists
 
@@ -20,15 +20,15 @@ The workflow formalizes what was already happening informally and makes it repea
 
 ```
 Human defines goal
-→ AI_1 proposes solution
-→ AI_2 critiques with severity-ranked concerns
-→ AI_1 revises
-→ AI_2 reviews again
-→ Convergence (or Human deadlock resolution)
-→ Scope freeze
-→ Human approves at implementation gate
-→ Implementation
-→ Validation
+-> AI_1 proposes solution
+-> AI_2 critiques with severity-ranked concerns
+-> AI_1 revises
+-> AI_2 reviews again
+-> Convergence (or Human deadlock resolution)
+-> Scope freeze
+-> Human approves at implementation gate
+-> Implementation
+-> Validation
 ```
 
 Each step is recorded in a Workflow Record document that travels with the project. The wiki you are reading now defines the rules for that document and this process.

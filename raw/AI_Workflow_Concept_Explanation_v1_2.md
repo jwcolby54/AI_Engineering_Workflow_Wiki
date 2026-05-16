@@ -16,12 +16,12 @@ It is a structured adversarial-review engineering system involving:
 The workflow pattern:
 
 Human proposes goal
-→ AI proposes
-→ other AI critiques
-→ revision
-→ re-review
-→ convergence
-→ implementation
+-> AI proposes
+-> other AI critiques
+-> revision
+-> re-review
+-> convergence
+-> implementation
 
 The value is not merely code generation.
 
@@ -127,7 +127,7 @@ The value came from:
 - adversarial pressure
 - forced justification loops
 
-Not from “more code generation.”
+Not from "more code generation."
 
 ---
 
@@ -141,10 +141,10 @@ The introduction of:
 - terminal states
 
 transformed the workflow from:
-“documentation”
+"documentation"
 
 into:
-“a governed engineering protocol.”
+"a governed engineering protocol."
 
 This enables:
 - automation later
@@ -245,7 +245,7 @@ Premature automation would freeze bad assumptions.
 # Most Important Conclusion
 
 This workflow is not:
-“multiple AIs helping write software.”
+"multiple AIs helping write software."
 
 It is:
 a collaborative AI-assisted systems engineering governance model using:
@@ -259,4 +259,4 @@ implemented using structured Markdown artifacts.
 
 ---
 
-*v1.2 — Consolidated from full Human + Claude + ChatGPT review session.*
+*v1.2 - Consolidated from full Human + Claude + ChatGPT review session.*

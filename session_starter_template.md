@@ -26,6 +26,7 @@ Requirements:
 - Use adversarial review semantics and severity levels (BLOCKING/MAJOR/MINOR/FUTURE).
 - Respect frozen scope. Do not implement before the gate is cleared.
 - Human remains final authority.
+- Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters.
 ```
 
 ---
@@ -71,6 +72,44 @@ Required behaviors:
 - Update workflow artifacts as reasoning evolves. The record is the system of record.
 - Respect frozen scope and severity semantics.
 - Human remains final authority.
+- Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters.
+```
+
+---
+
+## Active/History Two-File Records
+
+When the Workflow Record uses the active/history paired convention, replace the
+single `Workflow Record:` line with the following in either the compact or full form:
+
+```text
+Workflow Record (active):  [full path to .active.md]
+Workflow Record (history): [full path to .history.md or "none - not yet created"]
+
+Read the active record first. Treat it as the authoritative current working state.
+Read the history record only if the active record's "Read History Only If" section
+explicitly says archived context is required for your next action, or if the Human
+asks you to audit prior history.
+
+If the active record shows a prune occurred, verify current state from the active
+record. Do not load the full history by default.
+```
+
+---
+
+## Legacy Single-File Records
+
+When the Workflow Record is a legacy single-file record (YYYY-MM-DD_<topic>.md),
+use the existing `Workflow Record:` line as normal. Add this note to either form:
+
+```text
+Workflow Record: [full path to single-file .md]
+
+This is a legacy single-file Workflow Record. If you are reading it as history
+or reference only, do not convert it. If active work will resume in this record
+(new round, repair, extension), convert it to the active/history two-file model
+before adding new content. Conversion is mechanical - no workflow gate required.
+See templates/AI_Workflow_Record_Update_Instructions.md for the conversion rule.
 ```
 
 ---

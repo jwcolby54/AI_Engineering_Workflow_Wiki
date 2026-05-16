@@ -1,32 +1,14 @@
-# [Project Name] - [Topic] Workflow Record
+# [Project Name] - [Topic] Active Workflow Record
 
 **Status:** `NEEDS_REVIEW`
 **Document Version:** 1.0
+**Active Record:** `WorkflowRecords/YYYY-MM-DD_<topic>.active.md`
+**History Record:** `WorkflowRecords/YYYY-MM-DD_<topic>.history.md`
 **Created:** [DATE]
 **Revised:** [DATE]
-**AI_1 (Proposing):** [Claude / ChatGPT / Codex / other]
-**AI_2 (Reviewing):** [Claude / ChatGPT / Codex / other]
+**AI_1 (Proposing):** [Claude / Codex / other]
+**AI_2 (Reviewing):** [Claude / Codex / other]
 **Change Summary (v1.0):** Initial draft
-
----
-
-# Resume Snapshot
-
-**Current Phase:** [Proposal / Critique / Revision / Final Review / Scope Freeze / Gate / Implementation / Validation]
-**Current Round:** [Round 1]
-**Open Concerns:** [None / summary of unresolved BLOCKING or MAJOR concerns]
-**Frozen Scope:** [No / Yes - see [Scope Freeze](#6-scope-freeze)]
-**Gate Status:** [BLOCKED_PENDING_REVIEW / CLEARED / other - see [Implementation Gate](#7-implementation-gate)]
-**Next Actor:** [AI_1 / AI_2 / Human]
-**Next Action:** [One sentence]
-
-**Resume Reading Order:**
-1. [Objective](#1-objective)
-2. [Human Requirements](#3-human-requirements)
-3. [Design Review Loop](#5-design-review-loop)
-4. [Scope Freeze](#6-scope-freeze)
-5. [Implementation Gate](#7-implementation-gate)
-6. [Next Action](#10-next-action)
 
 ---
 
@@ -44,9 +26,34 @@ Before writing this file back to disk, normalize it to ASCII.
 
 ---
 
+# ============================================================
+# ZONE 1 - ALWAYS LOADED
+# Never prune this zone while the workflow is active.
+# ============================================================
+
+# Resume Snapshot
+
+**Current Phase:** [Proposal / Critique / Revision / Final Review / Gate / Implementation / Validation]
+**Current Round:** [Round 1]
+**Open Concerns:** [None / summary of unresolved BLOCKING or MAJOR concerns]
+**Frozen Scope:** [No / Yes - v1.x]
+**Gate Status:** [BLOCKED_PENDING_REVIEW / BLOCKED_PENDING_HUMAN_APPROVAL / APPROVED]
+**Next Actor:** [AI_1 / AI_2 / Human]
+**Next Action:** [One sentence describing exactly what to do next]
+
+**Resume Reading Order:**
+1. Resume Snapshot (this section)
+2. [Objective](#1-objective)
+3. [Human Requirements](#3-human-requirements)
+4. [Active Work](#active-work)
+5. [Read History Only If](#read-history-only-if) (check before loading history)
+
+---
+
 # 1. Objective
 
-[What engineering decision or design is being worked out in this session? Be specific enough that both AIs can evaluate proposals against it.]
+[What engineering decision or design is being worked out? Be specific enough that
+both AIs can evaluate proposals against it without reading the history record.]
 
 ---
 
@@ -75,12 +82,19 @@ Requirements explicitly stated by the Human. These are not negotiable by AI syst
 
 # 4. Constraints
 
-- AI context windows are finite - keep sessions focused.
+- AI context windows are finite - keep this active file focused.
 - Human remains final authority.
 - Workflow must remain manually operable without special tooling.
+- No history may be lost; material may only be moved after confirmed write to File B.
 - [Add project-specific constraints here.]
 
 ---
+
+# ============================================================
+# ZONE 2 - ACTIVE WORK
+# Contains only the current round and open concerns.
+# Completed rounds are pruned to the history record.
+# ============================================================
 
 # 5. Design Review Loop
 
@@ -127,7 +141,7 @@ ROUND 1
 **Timestamp:** [YYYY-MM-DD HH:MM TZ]
 **Authority:** Human (final authority per governance model)
 
-[Optional. Record Human direction given after critique and before AI_1 revision. Use this when the Human selects between options, clarifies priorities, grants a waiver, or gives authoritative guidance that AI_1 must incorporate.]
+[Optional. Record Human direction given after critique and before AI_1 revision.]
 
 | Concern | Human Direction |
 |---|---|
@@ -177,9 +191,10 @@ ROUND 1
 END ROUND 1
 ============================================================
 
----
-
-<!-- If additional rounds are needed, copy the ROUND block above and increment the number. Do not delete prior rounds. -->
+<!-- When Round 1 is complete and scope is frozen, prune this round to the history
+     record. Keep a compact concern-disposition table here in Zone 2 if needed for
+     scope drift protection. See Prune Event instructions in
+     templates/AI_Workflow_Record_Update_Instructions.md. -->
 
 ---
 
@@ -198,7 +213,7 @@ END ROUND 1
 
 **Timestamp:** [YYYY-MM-DD HH:MM TZ]
 
-**Approved Scope Version:** [VERSION - match Document Version above]
+**Approved Scope Version:** [VERSION]
 
 **Frozen Scope Covers:**
 -
@@ -257,6 +272,29 @@ Implementation is complete when:
 # 10. Next Action
 
 1.
+
+---
+
+# ============================================================
+# ZONE 3 - ARCHIVE INDEX
+# Compact pointers to completed history in the history record.
+# Grows as rounds are pruned. Read history only when directed below.
+# ============================================================
+
+# Archive Index
+
+| Event ID | Timestamp | Actor | What Was Moved |
+|---|---|---|---|
+| [none yet] | | | |
+
+---
+
+# Read History Only If
+
+[List specific conditions under which the next actor should read the history record.
+Be specific. Default is: do NOT read history unless listed here.]
+
+- Read `ARCHIVE-[ID]` if [specific condition - e.g., "revisiting the Round 1 rejected option"].
 
 ---
 

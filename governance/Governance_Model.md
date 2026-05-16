@@ -10,7 +10,7 @@ The workflow uses three-party structured adversarial review.
 | AI_1 (proposing AI) | Drafts proposals, revises based on critique, updates Workflow Record |
 | AI_2 (reviewing AI) | Critiques proposals, assigns severity to concerns, provides final review |
 
-The roles of AI_1 and AI_2 may be filled by Claude or ChatGPT. The assignment may vary by session. What matters is that the two AIs are operating from independent perspectives — not that a specific model always fills a specific role.
+The roles of AI_1 and AI_2 may be filled by Claude or ChatGPT. The assignment may vary by session. What matters is that the two AIs are operating from independent perspectives - not that a specific model always fills a specific role.
 
 ---
 
@@ -18,7 +18,7 @@ The roles of AI_1 and AI_2 may be filled by Claude or ChatGPT. The assignment ma
 
 Two-party review (Human + one AI) is insufficient because it lacks independent scrutiny. The Human brings domain authority and final judgment but may miss technical edge cases. A single AI brings analytical capability but has blind spots it cannot see by definition. A second AI operating independently creates adversarial pressure that surfaces what either party alone would miss.
 
-The governance model is designed around the assumption that no single participant — human or AI — is reliable enough to own the full review process alone.
+The governance model is designed around the assumption that no single participant - human or AI - is reliable enough to own the full review process alone.
 
 ---
 
@@ -52,4 +52,4 @@ No AI system may self-approve deployment. No AI system may override Human decisi
 
 ## Future Participants
 
-The workflow is designed to accommodate additional AI reviewers in future sessions. A third AI may participate as an additional reviewer, with its concerns recorded using the same severity taxonomy. The governance structure does not change — Human authority and the three-phase review model remain constant regardless of how many AI systems participate.
+The workflow is designed to accommodate additional AI reviewers in future sessions. A third AI may participate as an additional reviewer, with its concerns recorded using the same severity taxonomy. The governance structure does not change - Human authority and the three-phase review model remain constant regardless of how many AI systems participate.

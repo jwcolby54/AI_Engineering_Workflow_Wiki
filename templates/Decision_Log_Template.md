@@ -1,4 +1,4 @@
-# Decision Log — [Project Name]
+# Decision Log - [Project Name]
 
 **Project:** [Project Name]
 **Last Updated:** [DATE]
@@ -21,7 +21,7 @@ This log is not a substitute for Workflow Records. It is a navigation index for 
 
 ## Entries
 
-### [DATE] — [Decision Title]
+### [DATE] - [Decision Title]
 
 **Decision:** [One or two sentences describing what was decided]
 

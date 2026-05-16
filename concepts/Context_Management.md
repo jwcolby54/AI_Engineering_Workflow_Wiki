@@ -2,7 +2,7 @@
 
 ## The Core Problem
 
-Chats are ephemeral. A 50-message design session contains reasoning, rationale, critiques, revisions, and decisions — none of which survives the session unless it is explicitly externalized. Even within a session, long chats degrade quality: earlier context becomes diluted, token costs compound, and focus diffuses.
+Chats are ephemeral. A 50-message design session contains reasoning, rationale, critiques, revisions, and decisions - none of which survives the session unless it is explicitly externalized. Even within a session, long chats degrade quality: earlier context becomes diluted, token costs compound, and focus diffuses.
 
 This is not a complaint about AI systems. It is a structural fact about how they work. The workflow is designed around this constraint.
 
@@ -42,9 +42,43 @@ No re-reading of prior chat required. No reconstruction from memory.
 
 ---
 
+## Active/History Two-File Records
+
+Workflow Records can grow large as proposals, critiques, revisions, implementation
+checkpoints, and validation evidence accumulate. Both AI systems then repeatedly
+load completed history that is no longer needed for the next action.
+
+The active/history model addresses this by splitting the Workflow Record into two
+paired files:
+
+- Active Record (.active.md): compact current-state file. Contains exactly what is
+  required to continue work safely. Every AI reads this first.
+- History Record (.history.md): append-only archive of completed material pruned
+  from the active record. Loaded only when the active record explicitly says it is
+  needed.
+
+As work progresses, completed material is moved from the active record to the
+history record via a Prune Event. The active record stays compact. The history
+record preserves the full audit trail.
+
+**Default-read rule:** agents read the active record first. Agents read the history
+record only when the active record's "Read History Only If" section says archived
+context is required for the next action.
+
+**Cold-resume invariant:** the active record is valid only if an AI can resume
+safely from it without reading history. See the Prune Event protocol in
+`templates/AI_Workflow_Record_Update_Instructions.md` for the full invariant.
+
+**Legacy records:** existing single-file records (YYYY-MM-DD_<topic>.md) are not
+retroactively split. They remain as-is for read-only reference. If reopened for
+active work, convert to the two-file model before adding new content. See the
+legacy conversion rule in the Update Instructions.
+
+---
+
 ## Starting a New Topic
 
-When a new engineering topic begins, a new Workflow Record is created from the [template](../templates/AI_Workflow_Record_Template.md). The prior Workflow Record for the old topic is left in place — it is the permanent record of that decision.
+When a new engineering topic begins, a new Workflow Record is created from the [template](../templates/AI_Workflow_Record_Template.md). The prior Workflow Record for the old topic is left in place - it is the permanent record of that decision.
 
 ---
 

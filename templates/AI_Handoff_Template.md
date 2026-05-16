@@ -1,4 +1,4 @@
-# AI Handoff Document — [Project Name] / [Topic]
+# AI Handoff Document - [Project Name] / [Topic]
 
 **Prepared by:** [AI system preparing the handoff]
 **Prepared for:** [AI system receiving the handoff]
@@ -16,7 +16,7 @@ This document transfers active session context from one AI system to another. Th
 
 ## What Has Been Done
 
-[2-4 bullet points summarizing the session so far — proposal made, critique completed, revision made, etc.]
+[2-4 bullet points summarizing the session so far - proposal made, critique completed, revision made, etc.]
 
 -
 -
@@ -56,7 +56,7 @@ List any concerns that are unresolved. The receiving AI must not treat these as 
 
 ## What the Receiving AI Must Not Do
 
-- Do not treat prior AI approval as your own approval — review independently
+- Do not treat prior AI approval as your own approval - review independently
 - Do not silently modify the scope
 - Do not skip to implementation before the gate is cleared
 - Do not rewrite prior rounds in the Workflow Record
@@ -65,7 +65,7 @@ List any concerns that are unresolved. The receiving AI must not treat these as 
 
 ## Context the Receiving AI Should Know
 
-[Any project-specific context that is not in the Workflow Record but is relevant — system constraints, known quirks, Human preferences expressed in chat, etc.]
+[Any project-specific context that is not in the Workflow Record but is relevant - system constraints, known quirks, Human preferences expressed in chat, etc.]
 
 -
 

@@ -8,7 +8,7 @@ The implementation gate is a hard stop before implementation begins. No implemen
 |---|---|
 | AI_1 (proposing AI) | Confirms proposal is implementation-ready |
 | AI_2 (reviewing AI) | Confirms concerns are resolved and scope is sound |
-| Human | Final authority — explicitly approves or blocks |
+| Human | Final authority - explicitly approves or blocks |
 
 The gate exists because AI convergence is necessary but not sufficient. The Human may have constraints, priorities, or information that neither AI system has. The gate preserves the Human's authority to say "not yet" even when both AIs agree.
 
@@ -53,4 +53,4 @@ Bypassing the implementation gate without Human approval is a governance violati
 3. Complete the gate process retroactively
 4. Resume implementation only after Human approval
 
-This is not bureaucratic punishment — it exists because post-hoc review of already-implemented changes is less effective than pre-implementation review.
+This is not bureaucratic punishment - it exists because post-hoc review of already-implemented changes is less effective than pre-implementation review.

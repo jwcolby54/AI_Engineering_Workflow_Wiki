@@ -6,7 +6,7 @@
 **Revised:** 2026-05-09
 **AI_1 (Proposing):** ChatGPT / Codex
 **AI_2 (Reviewing):** Claude (claude-sonnet-4-6)
-**Change Summary (v1.8):** Human validated — record closed
+**Change Summary (v1.8):** Human validated - record closed
 
 ---
 
@@ -152,39 +152,39 @@ Recommended publication path:
 
 ### Concern Detail
 
-**C1 — Target audience undefined (MAJOR)**
+**C1 - Target audience undefined (MAJOR)**
 
 The proposal is framed as "adoption-oriented" and assumes a reader who already understands what the Karpathy LLM Wiki pattern is. No audience is defined: software engineers, ML engineers, engineering managers, and AI researchers each need different framing, different example depth, and different entry points. Without an audience definition, the implementation team has no basis for calibrating tone, terminology, or example complexity. The proposal cannot be implemented consistently without this decision.
 
-**C2 — Platform / hosting decision deferred (MAJOR)**
+**C2 - Platform / hosting decision deferred (MAJOR)**
 
 The proposal says "public repository or static wiki" without choosing. This is not a minor detail: the platform determines link semantics, file format constraints (e.g., relative links that work on GitHub may not work on a static site), discoverability, contribution model, and the adoption experience. These choices are prerequisites for the structural decisions in the same proposal (top-level file layout, `README.md` placement, etc.). The proposal cannot be scoped for implementation until the platform is chosen.
 
-**C3 — Karpathy attribution language not frozen (MAJOR)**
+**C3 - Karpathy attribution language not frozen (MAJOR)**
 
-The proposal explicitly identifies the Karpathy reference as a known risk ("could be interpreted as endorsement or affiliation if phrased carelessly") and lists a constraint against implying endorsement (Section 4). Despite this, the exact public-facing language is left to implementation discretion — only a sample message is given. Because this is both a known reputational risk and a named constraint, the approved attribution language must be frozen in scope before the implementation gate opens. Delegating the final wording to implementation removes the review layer that the constraint requires.
+The proposal explicitly identifies the Karpathy reference as a known risk ("could be interpreted as endorsement or affiliation if phrased carelessly") and lists a constraint against implying endorsement (Section 4). Despite this, the exact public-facing language is left to implementation discretion - only a sample message is given. Because this is both a known reputational risk and a named constraint, the approved attribution language must be frozen in scope before the implementation gate opens. Delegating the final wording to implementation removes the review layer that the constraint requires.
 
-**C4 — No licensing decision (MAJOR)**
+**C4 - No licensing decision (MAJOR)**
 
-The stated goal is an "adoption-oriented" release: "useful enough for others to inspect, clone, or adapt manually." Without an explicit license, legal adaptation is not permitted — copyright is retained by default. This is a correctness flaw: the proposal's adoption goal is contradicted by the absence of a licensing decision. The Human must decide on a license (e.g., CC BY 4.0 for documentation, MIT, or an explicit "all rights reserved with limited use grant") before publication. This decision should be frozen in scope.
+The stated goal is an "adoption-oriented" release: "useful enough for others to inspect, clone, or adapt manually." Without an explicit license, legal adaptation is not permitted - copyright is retained by default. This is a correctness flaw: the proposal's adoption goal is contradicted by the absence of a licensing decision. The Human must decide on a license (e.g., CC BY 4.0 for documentation, MIT, or an explicit "all rights reserved with limited use grant") before publication. This decision should be frozen in scope.
 
-**C5 — Example deliverable underspecified (MAJOR)**
+**C5 - Example deliverable underspecified (MAJOR)**
 
 Section 8 lists "sanitized example workflow record, if approved" as a potential deliverable. Neither the proposal nor the scope freeze criteria define: which record is to be used as the example, what "sanitized" means operationally (what categories of content must be removed or redacted), who performs the sanitization review, or what "if approved" requires for the Human to approve. Without these criteria, the examples deliverable is unbounded and cannot be implemented consistently.
 
-**C6 — Three-layer structure does not map to concrete deliverables (MAJOR)**
+**C6 - Three-layer structure does not map to concrete deliverables (MAJOR)**
 
 The Positioning / Protocol / Adoption layer model is conceptually coherent but entirely abstract. The proposal does not specify which existing wiki files go into which layer, which files require editing and what those edits entail, or what "lightly edited for public readers" means. The proposed top-level structure in item 5 lists directories but does not map them to specific source files, required edits, or new content to be written. Implementation cannot scope against this description. At minimum, the frozen scope must include a file-level delivery list and an edit category (no change / light edit / new content) for each item.
 
-**C7 — Validation criteria are almost entirely subjective (MINOR)**
+**C7 - Validation criteria are almost entirely subjective (MINOR)**
 
 Section 9 validation criteria are: "accurately describes," "acknowledged without implying," "can be followed by a new reader," "remain intact," and "Human confirms." Only criterion 5 (Human confirmation) provides a binding acceptance test. The others depend on implementation-time judgment with no operationalized standard. This does not block convergence but creates risk that implementation-time self-assessment and Human assessment diverge. Recommend adding at least one concrete, verifiable criterion (e.g., "a reviewer not familiar with the project can complete one workflow record cycle using only the published artifacts").
 
-**C8 — No criteria to inform the `raw/` directory decision (MINOR)**
+**C8 - No criteria to inform the `raw/` directory decision (MINOR)**
 
 The proposal defers the `raw/` inclusion decision to Human approval but provides no framing to help the Human make that decision. What risk does including genesis artifacts create? What value do they add? Without a brief rationale for the tradeoffs, the Human is asked to make a decision without adequate context. A one-paragraph framing in the proposal would improve this without expanding scope.
 
-**C9 — No maintenance / divergence strategy (FUTURE)**
+**C9 - No maintenance / divergence strategy (FUTURE)**
 
 Once a public artifact is published, the internal wiki will continue evolving. The proposal correctly excludes this from current scope, but there is no note in scope freeze or future work sections acknowledging that divergence management will need its own workflow record. Recommend recording as a named future item so it does not get lost.
 
@@ -211,15 +211,15 @@ This input was provided by the Human after AI_2 critique and before AI_1 revisio
 
 | Concern | Human Direction |
 |---|---|
-| C1 — Audience | Engineering types who think in a "design meeting" paradigm. This is the intended initial target audience. |
-| C2 — Platform | Human defers to AI. AI_1 must research available options and provide recommendations with reasons. |
-| C3 — Karpathy attribution | Simple thanks and clear attribution is sufficient. The LLM Wiki is well-known; no elaborate disclaimer is needed. |
-| C4 — Licensing | Intent is open source, to the extent Karpathy's own license allows. AI_1 must research Karpathy's license before proposing a license direction, as it may constrain the choice. |
-| C5 — Examples | The "example" is the whole system package: the session starter Markdown files, the wiki, and this workflow record as a live example of how the process flows. All three are required for the published artifact to be usable out of the box. |
-| C6 — File-level scope | AI_1 must provide a concrete file-level delivery list with edit categories. |
-| C7 — Validation | Validation is inherently per-session and variable by design. The system is early-stage and expected to evolve. Absolute correctness is not claimed. |
-| C8 — `raw/` rationale | Include rationale in the proposal to help the Human decide. |
-| C9 — Divergence strategy | Document as a named future item so it is not lost. |
+| C1 - Audience | Engineering types who think in a "design meeting" paradigm. This is the intended initial target audience. |
+| C2 - Platform | Human defers to AI. AI_1 must research available options and provide recommendations with reasons. |
+| C3 - Karpathy attribution | Simple thanks and clear attribution is sufficient. The LLM Wiki is well-known; no elaborate disclaimer is needed. |
+| C4 - Licensing | Intent is open source, to the extent Karpathy's own license allows. AI_1 must research Karpathy's license before proposing a license direction, as it may constrain the choice. |
+| C5 - Examples | The "example" is the whole system package: the session starter Markdown files, the wiki, and this workflow record as a live example of how the process flows. All three are required for the published artifact to be usable out of the box. |
+| C6 - File-level scope | AI_1 must provide a concrete file-level delivery list with edit categories. |
+| C7 - Validation | Validation is inherently per-session and variable by design. The system is early-stage and expected to evolve. Absolute correctness is not claimed. |
+| C8 - `raw/` rationale | Include rationale in the proposal to help the Human decide. |
+| C9 - Divergence strategy | Document as a named future item so it is not lost. |
 
 ---
 
@@ -416,9 +416,9 @@ This clarification strengthens the adoption package and should be included in AI
 | # | Original Concern | Original Severity | Resolution Status | Notes |
 |---|---|---|---|---|
 | C1 | Target audience undefined | `MAJOR` | RESOLVED | Frozen as engineers who think in design-meeting terms. Framing is appropriate and specific. |
-| C2 | Platform / hosting deferred | `MAJOR` | RESOLVED — pending Human approval | GitHub + GitHub Pages + MkDocs recommended with reasoned comparison. Recommendation is sound. |
+| C2 | Platform / hosting deferred | `MAJOR` | RESOLVED - pending Human approval | GitHub + GitHub Pages + MkDocs recommended with reasoned comparison. Recommendation is sound. |
 | C3 | Karpathy attribution not frozen | `MAJOR` | RESOLVED | Exact language provided. Attribution is accurate, concise, and does not imply endorsement. |
-| C4 | No licensing decision | `MAJOR` | RESOLVED — pending Human approval | MIT recommended; Karpathy gist license research recorded; rationale is sound. |
+| C4 | No licensing decision | `MAJOR` | RESOLVED - pending Human approval | MIT recommended; Karpathy gist license research recorded; rationale is sound. |
 | C5 | Example deliverable underspecified | `MAJOR` | RESOLVED | Example redefined as the whole adoption package: starter, wiki, and live Workflow Record. |
 | C6 | No file-level delivery list | `MAJOR` | RESOLVED | 22-item delivery table with edit categories and scope notes provided. |
 | C7 | Validation criteria subjective | `MINOR` | RESOLVED | Three lightweight objective checks added; per-session variability affirmed as intentional. |
@@ -441,11 +441,11 @@ This clarification strengthens the adoption package and should be included in AI
 
 ### Human Clarification Addendum Assessment
 
-The second Human clarification (session starter as first-class entry point) is correctly incorporated by AI_1 into the delivery list. The updated README delivery intent — starter as Step 1 — strengthens the adoption layer and introduces no new concerns.
+The second Human clarification (session starter as first-class entry point) is correctly incorporated by AI_1 into the delivery list. The updated README delivery intent - starter as Step 1 - strengthens the adoption layer and introduces no new concerns.
 
 ### Overall Assessment
 
-All six original MAJOR concerns are resolved. Both MINOR concerns are addressed. The FUTURE item is recorded. The AI_1 revision is thorough, well-reasoned, and scoped appropriately. The two items held open as "Remaining Open Concerns" (platform/license) are not deficiencies in the proposal — they are correctly marked as requiring Human gate confirmation, which is the proper governance path.
+All six original MAJOR concerns are resolved. Both MINOR concerns are addressed. The FUTURE item is recorded. The AI_1 revision is thorough, well-reasoned, and scoped appropriately. The two items held open as "Remaining Open Concerns" (platform/license) are not deficiencies in the proposal - they are correctly marked as requiring Human gate confirmation, which is the proper governance path.
 
 The proposal is ready for scope freeze and implementation gate.
 
@@ -485,11 +485,11 @@ END ROUND 1
 - **Session starter prominence:** `README.md` must foreground the paste-in starter as Step 1; `index.md` must keep Session Bootstrap visibly high.
 - **File-level delivery list:** 22-item table in AI_1 revision, with edit categories and scope notes.
 - **`raw/` directory:** Include with clear historical labeling; route public readers to `index.md`, not `raw/`.
-- **Named future item:** Public/internal divergence management — separate Workflow Record after first release.
+- **Named future item:** Public/internal divergence management - separate Workflow Record after first release.
 
 **Explicitly Out Of Scope:**
 - Implementation, publication, repository restructuring, README drafting, artifact editing, automation, or public release before Human gate approval.
-- Resolving `Decision_Log_Template.md` / `AI_Handoff_Template.md` include/exclude before gate (MINOR N1 — default to include unless Human decides otherwise).
+- Resolving `Decision_Log_Template.md` / `AI_Handoff_Template.md` include/exclude before gate (MINOR N1 - default to include unless Human decides otherwise).
 
 **Rules:**
 - Implementation must target this frozen scope.
@@ -505,11 +505,11 @@ Implementation is NOT permitted until all parties approve.
 |---|---|---|
 | AI_1 | APPROVED | Submitted revision as READY_FOR_FINAL_REVIEW on 2026-05-09 |
 | AI_2 | APPROVED | Final review complete 2026-05-09; all MAJOR concerns resolved |
-| Human | APPROVED | 2026-05-09 — "I am good with scope freeze. I think we can publish." |
+| Human | APPROVED | 2026-05-09 - "I am good with scope freeze. I think we can publish." |
 
-**Gate Status:** `OPEN — implementation authorized`
+**Gate Status:** `OPEN - implementation authorized`
 
-**Human Post-Approval Note:** Published artifacts should remain modifiable if corrections are required post-release. The GitHub repository model satisfies this — updates are pushed as commits.
+**Human Post-Approval Note:** Published artifacts should remain modifiable if corrections are required post-release. The GitHub repository model satisfies this - updates are pushed as commits.
 
 **Outstanding MAJOR waivers (if any):**
 | Concern | Waiver Granted By | Reason |

@@ -23,6 +23,19 @@ Before proposing, reviewing, revising, or implementing, read:
 4. `concepts/Severity_Definitions.md`
 5. The active Workflow Record, if one exists
 
+## Critical Text Encoding Rule
+
+All Workflow artifacts must use plain ASCII only. This includes Workflow Records,
+project wikis, governance docs, templates, handoffs, prompts, generated Markdown,
+comments, and code written by an AI during Workflow work.
+
+Do not use smart quotes, curly apostrophes, em dashes, en dashes, Unicode arrows,
+math symbols, box-drawing characters, emojis, checkmark/cross icons, non-breaking
+spaces, or zero-width characters. Use ASCII replacements: `-`, `'`, `"`, `->`,
+`<-`, `<->`, `>=`, `<=`, `!=`, `~=`, `[OK]`, and `[NO]`.
+
+Before writing any Workflow artifact back to disk, normalize it to ASCII.
+
 ## Decide The Startup Mode
 
 Use one of these paths:
@@ -88,6 +101,7 @@ Requirements:
 - Use adversarial review semantics and severity levels (BLOCKING/MAJOR/MINOR/FUTURE).
 - Respect frozen scope. Do not implement before the gate is cleared.
 - Human remains final authority.
+- Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters.
 ```
 
 ## Operating Discipline

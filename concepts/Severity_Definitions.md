@@ -21,7 +21,7 @@ Severity levels exist to prevent endless review loops. Without them, a trivial n
 - An unresolved `MAJOR` concern requires an explicit Human waiver recorded in the Workflow Record
 - `MINOR` and `FUTURE` concerns may remain open without impact on gate approval
 - Severity is assigned by the reviewing AI, not the proposing AI
-- Severity downgrades (e.g., `BLOCKING` → `MAJOR`) require explicit justification recorded in the next round
+- Severity downgrades (e.g., `BLOCKING` -> `MAJOR`) require explicit justification recorded in the next round
 
 ---
 

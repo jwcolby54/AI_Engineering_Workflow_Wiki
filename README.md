@@ -30,6 +30,7 @@ Requirements:
 - Use adversarial review semantics and severity levels (BLOCKING/MAJOR/MINOR/FUTURE).
 - Respect frozen scope. Do not implement before the gate is cleared.
 - Human remains final authority.
+- Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters.
 ```
 
 That paste-in starter is the activation step for the whole workflow. Bootstrap files such as `CLAUDE.md` and `AGENTS.md` can help, but the session starter is the portable guarantee.

@@ -12,20 +12,31 @@ from pathlib import Path
 DEFAULT_WIKI = Path(r"E:\AI\AI_Engineering_Workflow_Wiki")
 
 
-MOJIBAKE_REPLACEMENTS = {
-    "â€”": "-",
-    "â€“": "-",
-    "â€˜": "'",
-    "â€™": "'",
-    "â€œ": '"',
-    "â€\x9d": '"',
-    "Â": "",
+ASCII_TRANSLATION = {
+    0x00A0: " ",
+    0x2011: "-",
+    0x2013: "-",
+    0x2014: "-",
+    0x2018: "'",
+    0x2019: "'",
+    0x201C: '"',
+    0x201D: '"',
+    0x2026: "...",
+    0x2190: "<-",
+    0x2192: "->",
+    0x2194: "<->",
+    0x2248: "~=",
+    0x2260: "!=",
+    0x2264: "<=",
+    0x2265: ">=",
+    0x2705: "[OK]",
+    0x274C: "[NO]",
 }
 
 
 def clean_text(text: str) -> str:
-    for bad, good in MOJIBAKE_REPLACEMENTS.items():
-        text = text.replace(bad, good)
+    text = text.translate(ASCII_TRANSLATION)
+    text = text.encode("ascii", errors="ignore").decode("ascii")
     return text.replace("\r\n", "\n").replace("\r", "\n")
 
 
@@ -121,7 +132,8 @@ Requirements:
 - Update the Workflow Record as reasoning evolves, not at the end.
 - Use adversarial review semantics and severity levels (BLOCKING/MAJOR/MINOR/FUTURE).
 - Respect frozen scope. Do not implement before the gate is cleared.
-- Human remains final authority."""
+- Human remains final authority.
+- Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters."""
 
 
 def ask(prompt: str, default: str | None = None) -> str:

@@ -9,6 +9,13 @@ Use this checklist when starting, resuming, or handing off a workflow session.
 - Workflow Records folder: default to `[PROJECT_ROOT]\WorkflowRecords`.
 - Active Workflow Record: an existing `.md` file or a new dated file.
 
+## 1a. Enforce ASCII-Only Text
+
+- All Workflow artifacts must use plain ASCII only.
+- Do not use smart quotes, curly apostrophes, em dashes, en dashes, Unicode arrows, math symbols, box-drawing characters, emojis, checkmark/cross icons, non-breaking spaces, or zero-width characters.
+- Use ASCII replacements: `-`, `'`, `"`, `->`, `<-`, `<->`, `>=`, `<=`, `!=`, `~=`, `[OK]`, and `[NO]`.
+- Normalize files to ASCII before writing them back to disk.
+
 ## 2. Establish Roles
 
 - `AI_1 proposing`: drafts proposals, revises after critique, records reasoning.

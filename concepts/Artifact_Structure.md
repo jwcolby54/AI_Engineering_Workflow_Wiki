@@ -87,9 +87,24 @@ Five layers of artifact exist in this system. Each serves a distinct purpose. Th
 
 **Location:** `[PROJECT_ROOT]/WorkflowRecords/`
 
-**Filename convention:** `YYYY-MM-DD_<topic>.md`
+**Filename conventions:**
+
+| Type | Files | When Used |
+|---|---|---|
+| Legacy single-file | `YYYY-MM-DD_<topic>.md` | Existing records; read-only reference |
+| Active/history paired | `YYYY-MM-DD_<topic>.active.md` + `YYYY-MM-DD_<topic>.history.md` | New records; records converted for active work |
+
+New Workflow Records use the active/history paired convention. Existing single-file
+records are legacy records. They are not retroactively split. If a legacy record is
+reopened for active work, convert it to the paired convention before adding new
+content. Conversion is mechanical; no workflow gate required.
 
 **Purpose:** The mutable, transactional record of a specific engineering session. One document per topic. This is what participating AIs read and write during a session.
+
+For paired records, the active file (.active.md) is the authoritative current state.
+The history file (.history.md) is the append-only archive of completed material. Read
+the active file first. Read history only when the active file explicitly says it is
+needed.
 
 **What belongs here:**
 - Objective and Human requirements
