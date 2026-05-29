@@ -34,6 +34,7 @@ Requirements:
 ```
 
 That paste-in starter is the activation step for the whole workflow. Bootstrap files such as `CLAUDE.md` and `AGENTS.md` can help, but the session starter is the portable guarantee.
+Bootstrap files are optional examples, not required runtime dependencies, so this workflow remains agent-agnostic.
 
 ---
 
