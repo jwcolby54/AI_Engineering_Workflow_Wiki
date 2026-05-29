@@ -26,6 +26,35 @@ Before saving the Workflow Record, normalize it to ASCII.
 
 ---
 
+## OS File Locking Rule
+
+Normal Workflow Record `.md` files are shared coordination artifacts. When two
+or more agents may read or write the same record, the record must be opened with
+an operating-system lock and closed immediately.
+
+Required access pattern:
+
+1. Check for a lock by trying to open the Workflow Record read-only with an
+   exclusive OS lock.
+2. If the locked read-only open fails, treat the file as busy. Do not write.
+   Wait and retry later.
+3. If the locked read-only open succeeds, read what is needed and close the file
+   immediately.
+4. To write, reopen the Workflow Record with write-capable exclusive access,
+   re-read the current contents through that locked handle, apply exactly one
+   update, flush the write, and close immediately.
+5. Always close the file.
+
+The Workflow Record must not be held open between agent reasoning steps, chat
+updates, tests, source-file edits, long-running commands, or any other work
+outside the single read or write operation.
+
+On Windows, the intended implementation is `.NET FileShare.None` for the locked
+open. The rule is cooperative: it works only if all participating agents follow
+the same locked-open/close-immediately discipline.
+
+---
+
 ## What To Update And When
 
 ### At every handoff or state change

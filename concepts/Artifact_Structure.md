@@ -106,6 +106,14 @@ The history file (.history.md) is the append-only archive of completed material.
 the active file first. Read history only when the active file explicitly says it is
 needed.
 
+Workflow Records are shared coordination files. When more than one agent may
+read or write the same `.md` record, agents must use the workflow OS file
+locking discipline: open the file with an exclusive OS lock, read or write one
+small update, flush if writing, and close immediately. The file must not be held
+open across reasoning, chat narration, source edits, tests, or long-running
+commands. On Windows, the intended implementation is `.NET FileShare.None` when
+tooling allows it.
+
 **What belongs here:**
 - Objective and Human requirements
 - All review rounds

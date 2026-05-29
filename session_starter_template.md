@@ -27,6 +27,7 @@ Requirements:
 - Respect frozen scope. Do not implement before the gate is cleared.
 - Human remains final authority.
 - Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters.
+- Use OS file locks for shared Workflow Record `.md` files: open locked, read or write one update, flush if writing, and always close immediately.
 ```
 
 ---
@@ -73,6 +74,7 @@ Required behaviors:
 - Respect frozen scope and severity semantics.
 - Human remains final authority.
 - Use plain ASCII only in all Workflow artifacts. No Unicode punctuation, arrows, math symbols, box drawing, emojis, non-breaking spaces, or zero-width characters.
+- Use OS file locks for shared Workflow Record `.md` files: open locked, read or write one update, flush if writing, and always close immediately.
 ```
 
 ---

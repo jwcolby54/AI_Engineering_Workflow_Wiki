@@ -26,6 +26,27 @@ Before writing this file back to disk, normalize it to ASCII.
 
 ---
 
+# 0a. Workflow File OS Locking Rule
+
+This Workflow Record is a shared coordination file. If more than one agent may
+read or write it, every access must use the workflow OS locking discipline:
+
+1. Check for a lock by trying to open this file read-only with an exclusive OS
+   lock.
+2. If the locked read-only open fails, treat the file as busy. Do not write.
+3. If the locked read-only open succeeds, read what is needed and close the file
+   immediately.
+4. To write, reopen this file with write-capable exclusive access, re-read the
+   current contents through that locked handle, apply one update, flush, and
+   close immediately.
+5. Always close the file.
+
+Never hold this file open across reasoning, chat narration, tests, source-file
+edits, or long-running commands. On Windows, use `.NET FileShare.None` when
+tooling allows it.
+
+---
+
 # ============================================================
 # ZONE 1 - ALWAYS LOADED
 # Never prune this zone while the workflow is active.

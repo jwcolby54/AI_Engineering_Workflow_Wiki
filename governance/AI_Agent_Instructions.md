@@ -32,6 +32,30 @@ Use ASCII replacements: `-`, `'`, `"`, `->`, `<-`, `<->`, `>=`, `<=`, `!=`,
 
 Before writing any Workflow artifact back to disk, normalize it to ASCII.
 
+## Workflow File OS Locking Rule
+
+Workflow `.md` files that may be read or written by more than one agent must be
+opened with an operating-system lock and closed immediately after the smallest
+practical read or write operation.
+
+Required discipline:
+
+1. Check for a lock by trying to open the workflow file read-only with an
+   exclusive OS lock.
+2. If the locked read-only open fails, treat the file as busy. Do not write.
+3. If the locked read-only open succeeds, read what is needed and close the file
+   immediately.
+4. To write, reopen the file with write-capable exclusive access, re-read the
+   current contents through that locked handle, apply one update, flush, and
+   close immediately.
+5. Always close the file. Never hold a Workflow Record, history record,
+   `AGENT_COMMS.md`, or other shared message `.md` file open across reasoning,
+   chat narration, tests, source edits, or long-running commands.
+
+On Windows, use `.NET FileShare.None` when tooling allows it. This is a
+cooperative rule: it prevents collisions only when all participating agents use
+the same locked-open/close-immediately discipline.
+
 ---
 
 ## Your Role in This Session
