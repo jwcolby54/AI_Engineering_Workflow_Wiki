@@ -174,6 +174,16 @@ Read the active record first. Read the history record only when the active recor
 "Read History Only If" section explicitly says archived context is required for your
 next action.
 
+For minimum-token resume after a context clear or a new chat/thread, the resume
+artifact is the absolute path to the active record. Do not direct the Human to
+paste the history record path. Do not require the starter file unless the Human
+explicitly wants a full bootstrap or the active record is unavailable.
+
+Recognized Human trigger phrases:
+- `trim context`
+- `prune active`
+- `trim context and print resume path`
+
 ---
 
 ## Prune Event Protocol
@@ -233,6 +243,13 @@ in Zone 1 (Permanent Context) before pruning.
     pre-deletion prediction. If any question cannot be answered, the active record
     has been over-pruned. Repair it immediately before any further workflow action.
 12. Increment the active record version and record the prune in the change summary.
+13. Print this exact block as the final operator-facing resume artifact. It must
+    be ready to paste into a fresh session without editing:
+
+```text
+Read the following file:
+[ABSOLUTE_PATH_TO_CURRENT_ACTIVE_RECORD]
+```
 
 Note on pre-deletion vs. post-deletion invariant checks:
 Step 4 is a planning check done BEFORE deletion. It asks: "Will the active record

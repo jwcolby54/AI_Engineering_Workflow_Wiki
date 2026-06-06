@@ -11,6 +11,10 @@ If you are an AI system reading this at the start of a session, this page define
 3. Read [State Definitions](../concepts/State_Definitions.md) - know the valid states and transitions
 4. Read [Severity Definitions](../concepts/Severity_Definitions.md) - know how to classify concerns
 5. Load the current Workflow Record for the topic being discussed
+6. If this session involves SQL schema, migrations, table definitions, or any
+   database object naming, read the database naming standards before writing
+   any SQL:
+   E:\AI\AI_Engineering_Workflow_Wiki\standards\database_naming_standards.md
 
 Do not begin proposing, critiquing, or implementing until you have done this.
 

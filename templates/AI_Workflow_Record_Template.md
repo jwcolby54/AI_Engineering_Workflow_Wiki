@@ -44,6 +44,26 @@ Before writing this file back to disk, normalize it to ASCII.
 
 ---
 
+# 0a. Mandatory Review Before Code Changes
+
+Do not implement, patch, refactor, or deploy code directly from chat narration.
+Before any code change, the proposing AI must write a recommendation in this
+Workflow Record, the reviewing AI must critique it with severity labels, and the
+Human must provide direction or gate approval as required by workflow state.
+
+Minimum required sequence before implementation:
+1. AI_1 proposal is written in the Design Review Loop.
+2. AI_2 critique is written with severity-labeled concerns.
+3. AI_1 revision is written (if required) and AI_2 final recommendation is recorded.
+4. Gate state and reviewer decisions are updated in Implementation Gate.
+5. Only then may implementation begin.
+
+If urgent operational mitigation is required (for example, active outage
+containment), record the mitigation and rationale in this Workflow Record
+immediately, then open a new review round for permanent corrective action.
+
+---
+
 # 1. Objective
 
 [What engineering decision or design is being worked out in this session? Be specific enough that both AIs can evaluate proposals against it.]

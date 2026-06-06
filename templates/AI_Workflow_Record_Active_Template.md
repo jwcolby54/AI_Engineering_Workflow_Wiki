@@ -47,6 +47,59 @@ tooling allows it.
 
 ---
 
+# 0b. Mandatory Review Before Code Changes
+
+Do not implement, patch, refactor, or deploy code directly from chat narration.
+Before any code change, the proposing AI must write a recommendation in this
+Active Record, the reviewing AI must critique it with severity labels, and the
+Human must provide direction or gate approval as required by workflow state.
+
+Minimum required sequence before implementation:
+1. AI_1 proposal is written in Zone 2.
+2. AI_2 critique is written with severity-labeled concerns.
+3. AI_1 revision is written (if required) and AI_2 final recommendation is recorded.
+4. Gate state and reviewer decisions are updated in Implementation Gate.
+5. Only then may implementation begin.
+
+If urgent operational mitigation is required (for example, active outage
+containment), record the mitigation and rationale in this Active Record
+immediately, then open a new review round for permanent corrective action.
+
+---
+
+# 0c. Cold-Start Resume Rule
+
+If this active record is provided as the first artifact in a fresh session or
+after a context clear:
+
+- Treat this file as the authoritative current workflow state.
+- Read this file first.
+- Do not read the paired history record unless the "Read History Only If"
+  section explicitly instructs you to do so.
+- Do not load a starter file or other workflow artifacts for resume unless the
+  Human explicitly asks for a full bootstrap or this active record requires it.
+- After any prune event, print the absolute path to this active record as the
+  Human's paste-ready resume artifact.
+
+---
+
+# 0d. Context Trim Trigger
+
+If the Human says `trim context`, `prune active`, or `trim context and print
+resume path`, perform the workflow prune procedure for this active record.
+
+Required final output after the prune:
+
+```text
+Read the following file:
+[ABSOLUTE_PATH_TO_THIS_ACTIVE_RECORD]
+```
+
+Do not print the paired history record path as the resume artifact unless the
+Human explicitly asks for the history record.
+
+---
+
 # ============================================================
 # ZONE 1 - ALWAYS LOADED
 # Never prune this zone while the workflow is active.

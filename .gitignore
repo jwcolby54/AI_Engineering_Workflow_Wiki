@@ -2,6 +2,7 @@
 .claude/
 docs/
 site/
+standards/
 __pycache__/
 *.py[cod]
 .DS_Store

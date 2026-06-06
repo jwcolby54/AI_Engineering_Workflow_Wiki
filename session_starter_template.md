@@ -57,8 +57,9 @@ Topic:            [engineering decision or design under review]
 Workflow Record:  [full path to active .md] / [new session]
 
 If this is a new session:
-- Create a Workflow Record from templates/AI_Workflow_Record_Template.md.
-- Save it to the requested WorkflowRecords location.
+- Create an active record from templates/AI_Workflow_Record_Active_Template.md.
+- Create the paired history record from templates/AI_Workflow_Record_History_Template.md.
+- Save them to the requested WorkflowRecords location.
 - Record the objective and initial proposal before requesting review.
 
 If this is a continuing session:
@@ -96,6 +97,32 @@ asks you to audit prior history.
 If the active record shows a prune occurred, verify current state from the active
 record. Do not load the full history by default.
 ```
+
+---
+
+## Post-Clear Minimal Resume
+
+When the Human is resuming the same workflow after a context clear or in a new
+chat/thread and wants minimum token reload, do not use the full starter unless a
+full bootstrap is actually needed.
+
+Use the active record path as the resume artifact. Paste either the bare path or
+a one-line prompt such as:
+
+```text
+Read the following file:
+[full path to .active.md]
+```
+
+If the first user message in a fresh session is an absolute path to a Workflow
+Record ending in `.active.md`, treat it as a minimal resume request:
+
+- Read that active record first.
+- Treat prior chat context as unavailable.
+- Do not read the paired history record unless the active record's
+  "Read History Only If" section explicitly instructs you to do so.
+- Do not load starter files or other workflow artifacts unless the Human asks
+  for a full bootstrap or the active record requires it.
 
 ---
 

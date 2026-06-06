@@ -46,6 +46,19 @@ Then ask the human:
 
 Do not begin engineering work until role and record location are confirmed.
 
+## Post-Clear Minimal Resume Rule
+
+After the required wiki bootstrap above, if the first human message in a fresh
+session is an absolute path to a Workflow Record ending in `.active.md`, treat
+it as a minimal resume request for the current topic:
+
+- Read that active record first.
+- Treat prior chat context as unavailable.
+- Do not read the paired history record unless the active record's
+  "Read History Only If" section explicitly instructs you to do so.
+- Do not load starter files or other workflow artifacts unless the human
+  explicitly asks for a full bootstrap or the active record requires it.
+
 ## System Architecture
 
 | Layer            | Purpose                          | Location |
@@ -61,14 +74,19 @@ Workflow Records for this project live in a flat dated folder:
 [PROJECT_ROOT]\WorkflowRecords\
 
 Filename convention:
-YYYY-MM-DD_<topic>.md
+YYYY-MM-DD_<topic>.active.md
+YYYY-MM-DD_<topic>.history.md
+
+Optional session-starter companion:
+<topic>.md
 
 Completion, validation, or supersession is recorded in the document header state. Do not move records to archive folders unless the human explicitly establishes a project-specific archival policy.
 
 ## Template Location
 
 To start a new Workflow Record:
-E:\AI\AI_Engineering_Workflow_Wiki\templates\AI_Workflow_Record_Template.md
+E:\AI\AI_Engineering_Workflow_Wiki\templates\AI_Workflow_Record_Active_Template.md
+E:\AI\AI_Engineering_Workflow_Wiki\templates\AI_Workflow_Record_History_Template.md
 
 ## Required Behaviors
 
