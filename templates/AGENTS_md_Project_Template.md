@@ -29,16 +29,16 @@ Use ASCII replacements: `-`, `'`, `"`, `->`, `<-`, `<->`, `>=`, `<=`, `!=`,
 ## Wiki Location
 
 The workflow wiki lives at:
-E:\AI\AI_Engineering_Workflow_Wiki\
+[path to AI_Engineering_Workflow_Wiki]
 
 ## At The Start of Every Engineering Session
 
 Before proposing, critiquing, or implementing anything:
 
-1. Read E:\AI\AI_Engineering_Workflow_Wiki\index.md
-2. Read E:\AI\AI_Engineering_Workflow_Wiki\governance\AI_Agent_Instructions.md
-3. Read E:\AI\AI_Engineering_Workflow_Wiki\concepts\State_Definitions.md
-4. Read E:\AI\AI_Engineering_Workflow_Wiki\concepts\Severity_Definitions.md
+1. Read [path to AI_Engineering_Workflow_Wiki]\index.md
+2. Read [path to AI_Engineering_Workflow_Wiki]\governance\AI_Agent_Instructions.md
+3. Read [path to AI_Engineering_Workflow_Wiki]\concepts\State_Definitions.md
+4. Read [path to AI_Engineering_Workflow_Wiki]\concepts\Severity_Definitions.md
 
 Then ask the human:
 - Which role am I playing? (AI_1 proposing / AI_2 reviewing)
@@ -63,7 +63,7 @@ it as a minimal resume request for the current topic:
 
 | Layer            | Purpose                          | Location |
 |---|---|---|
-| Wiki             | Durable knowledge and governance | E:\AI\AI_Engineering_Workflow_Wiki\ |
+| Wiki             | Durable knowledge and governance | [path to AI_Engineering_Workflow_Wiki] |
 | AGENTS.md        | Runtime behavioral bootstrap     | [PROJECT_ROOT]\AGENTS.md |
 | Workflow Records | Active engineering state         | [PROJECT_ROOT]\WorkflowRecords\ |
 | Source Artifacts | Ground truth implementation      | [PROJECT_ROOT]\[source dirs] |
@@ -85,8 +85,8 @@ Completion, validation, or supersession is recorded in the document header state
 ## Template Location
 
 To start a new Workflow Record:
-E:\AI\AI_Engineering_Workflow_Wiki\docs\AI_Workflow_Record_Active_Template.md
-E:\AI\AI_Engineering_Workflow_Wiki\docs\AI_Workflow_Record_History_Template.md
+[path to AI_Engineering_Workflow_Wiki]\docs\AI_Workflow_Record_Active_Template.md
+[path to AI_Engineering_Workflow_Wiki]\docs\AI_Workflow_Record_History_Template.md
 
 ## Required Behaviors
 

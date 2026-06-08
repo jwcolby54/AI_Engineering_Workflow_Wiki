@@ -10,6 +10,21 @@
 
 ---
 
+# Public Note
+
+This file is published as a worked example snapshot of a real Workflow Record.
+
+It is intentionally not rewritten into a polished article. It preserves the
+actual review flow, scope-freeze process, and implementation notes from the
+session that produced the first public package. Some lines refer to the local
+environment at the time and are kept as part of the historical record.
+
+Use this file to study how the workflow operates in practice. Use `index.md`,
+`start.md`, and the current templates when you want the current public entry
+points and operating rules.
+
+---
+
 # 1. Objective
 
 Decide how to publicly present and publish the AI Engineering Workflow system inspired by Andrej Karpathy's LLM Wiki pattern, while preserving the workflow's core claim: this is not a chat transcript or coding trick, but a portable AI-assisted engineering governance model using durable Markdown context, adversarial review, explicit state, scope freeze, and Human final authority.

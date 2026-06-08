@@ -16,6 +16,20 @@
 
 ---
 
+# Public Note
+
+This file is published as a historical genesis artifact and early worked
+example.
+
+It is preserved because it shows the early evolution of the workflow, including
+original role naming, model references, and pre-release structure. It is not
+the current canonical Workflow Record template or the current operating spec.
+
+For current usage, start with `index.md`, the current templates, and the newer
+worked example in `WorkflowRecords/2026-05-08_publish_ai_engineering_workflow.md`.
+
+---
+
 # 1. Objective
 
 Design a durable AI-assisted engineering workflow that allows:

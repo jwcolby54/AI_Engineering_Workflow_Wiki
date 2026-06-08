@@ -174,6 +174,6 @@ Bootstrap files should be compact pointers to the wiki, not copies of it. If pla
 Update the `Wiki:` line and path references for your machine.
 
 Common paths:
-- Windows: `C:\Users\[name]\AI\AI_Engineering_Workflow_Wiki\`
-- macOS/Linux: `/home/[name]/AI/AI_Engineering_Workflow_Wiki/`
+- Windows: `[drive]:\[path]\AI_Engineering_Workflow_Wiki\`
+- macOS/Linux: `/path/to/AI_Engineering_Workflow_Wiki/`
 - Project-local docs: `[project root]/AI_Engineering_Workflow_Wiki/`

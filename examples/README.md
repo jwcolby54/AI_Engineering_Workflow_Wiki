@@ -1,10 +1,17 @@
 # Examples
 
+Examples in this repository are intentionally real artifacts, not toy samples.
+They are published to show how the workflow behaves in practice.
+
 The first worked example is the publication workflow for this project:
 
 [Publication Workflow Record](../WorkflowRecords/2026-05-08_publish_ai_engineering_workflow.md)
 
-It is intentionally a real Workflow Record rather than a toy sample. It shows:
+This file should be read as a worked example snapshot. It preserves the original
+record structure and decision history, including environment-specific notes that
+were true at the time of the session.
+
+It shows:
 
 - AI_1 proposal
 - AI_2 severity-ranked critique

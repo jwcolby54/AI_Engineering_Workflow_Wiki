@@ -4,6 +4,20 @@
 
 ---
 
+# Public Note
+
+This file is published as a historical genesis artifact.
+
+It is useful for provenance because it shows how the workflow was originally
+reasoned about, but it is not the current operating spec. Model-specific
+references and historical phrasing are preserved intentionally as part of that
+history.
+
+For current usage, start with `index.md`, `start.md`, and the current templates
+instead of treating this file as normative.
+
+---
+
 # Core Insight
 
 The workflow is not simple note-taking.
