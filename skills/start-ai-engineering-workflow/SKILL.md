@@ -40,7 +40,7 @@ Before writing any Workflow artifact back to disk, normalize it to ASCII.
 
 Use one of these paths:
 
-- **New session**: create a Workflow Record from `templates/AI_Workflow_Record_Template.md`, save it under the target project's `WorkflowRecords/`, then record the objective and initial state.
+- **New session**: create a Workflow Record from `docs/AI_Workflow_Record_Template.md`, save it under the target project's `WorkflowRecords/`, then record the objective and initial state.
 - **Resume session**: read the existing Workflow Record, identify current status, gate status, latest round, next actor, and next action before doing new work.
 - **Second-AI review**: give the reviewing AI the wiki path, active Workflow Record path, and role `AI_2 reviewing`; require severity-ranked critique.
 - **Handoff**: use `templates/AI_Handoff_Template.md` when moving between AI platforms or when the receiving AI needs a compact resume packet.

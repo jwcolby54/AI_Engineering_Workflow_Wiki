@@ -26,7 +26,7 @@ If role is unclear, ask before continuing.
 
 ## 3. Start A New Record
 
-1. Copy `templates\AI_Workflow_Record_Template.md`.
+1. Copy `docs\AI_Workflow_Record_Template.md`.
 2. Save it as `WorkflowRecords\YYYY-MM-DD_<topic>.md`.
 3. Fill header fields:
    - Status: `NEEDS_REVIEW`

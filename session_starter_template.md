@@ -57,8 +57,8 @@ Topic:            [engineering decision or design under review]
 Workflow Record:  [full path to active .md] / [new session]
 
 If this is a new session:
-- Create an active record from templates/AI_Workflow_Record_Active_Template.md.
-- Create the paired history record from templates/AI_Workflow_Record_History_Template.md.
+- Create an active record from docs/AI_Workflow_Record_Active_Template.md.
+- Create the paired history record from docs/AI_Workflow_Record_History_Template.md.
 - Save them to the requested WorkflowRecords location.
 - Record the objective and initial proposal before requesting review.
 
@@ -138,7 +138,7 @@ This is a legacy single-file Workflow Record. If you are reading it as history
 or reference only, do not convert it. If active work will resume in this record
 (new round, repair, extension), convert it to the active/history two-file model
 before adding new content. Conversion is mechanical - no workflow gate required.
-See templates/AI_Workflow_Record_Update_Instructions.md for the conversion rule.
+See docs/AI_Workflow_Record_Update_Instructions.md for the conversion rule.
 ```
 
 ---

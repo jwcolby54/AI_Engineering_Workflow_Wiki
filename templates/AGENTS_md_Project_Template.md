@@ -85,8 +85,8 @@ Completion, validation, or supersession is recorded in the document header state
 ## Template Location
 
 To start a new Workflow Record:
-E:\AI\AI_Engineering_Workflow_Wiki\templates\AI_Workflow_Record_Active_Template.md
-E:\AI\AI_Engineering_Workflow_Wiki\templates\AI_Workflow_Record_History_Template.md
+E:\AI\AI_Engineering_Workflow_Wiki\docs\AI_Workflow_Record_Active_Template.md
+E:\AI\AI_Engineering_Workflow_Wiki\docs\AI_Workflow_Record_History_Template.md
 
 ## Required Behaviors
 

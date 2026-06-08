@@ -59,10 +59,10 @@ A durable knowledge and governance layer. It defines the workflow model, the rul
 - [AGENTS.md Project Template](templates/AGENTS_md_Project_Template.md) - project bootstrap for Codex or other agent systems
 
 ### Templates
-- [Active Workflow Record Template](templates/AI_Workflow_Record_Active_Template.md) - File A for new records using the active/history model
-- [History Workflow Record Template](templates/AI_Workflow_Record_History_Template.md) - File B for new records using the active/history model
-- [Workflow Record Template](templates/AI_Workflow_Record_Template.md) - legacy single-file template; use active/history templates for new records
-- [Workflow Record Update Instructions](templates/AI_Workflow_Record_Update_Instructions.md) - how to update the record during a session; includes prune protocol
+- [Active Workflow Record Template](docs/AI_Workflow_Record_Active_Template.md) - File A for new records using the active/history model
+- [History Workflow Record Template](docs/AI_Workflow_Record_History_Template.md) - File B for new records using the active/history model
+- [Workflow Record Template](docs/AI_Workflow_Record_Template.md) - legacy single-file template; use active/history templates for new records
+- [Workflow Record Update Instructions](docs/AI_Workflow_Record_Update_Instructions.md) - how to update the record during a session; includes prune protocol
 - [Decision Log Template](templates/Decision_Log_Template.md)
 - [AI Handoff Template](templates/AI_Handoff_Template.md)
 

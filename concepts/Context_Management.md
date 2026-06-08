@@ -25,7 +25,7 @@ The participating AI updates the Workflow Record:
 - After each gate decision
 - When scope freeze is established
 
-See [AI Workflow Record Update Instructions](../templates/AI_Workflow_Record_Update_Instructions.md) for the full behavioral spec.
+See [AI Workflow Record Update Instructions](../docs/AI_Workflow_Record_Update_Instructions.md) for the full behavioral spec.
 
 ---
 
@@ -67,7 +67,7 @@ context is required for the next action.
 
 **Cold-resume invariant:** the active record is valid only if an AI can resume
 safely from it without reading history. See the Prune Event protocol in
-`templates/AI_Workflow_Record_Update_Instructions.md` for the full invariant.
+`docs/AI_Workflow_Record_Update_Instructions.md` for the full invariant.
 
 **Legacy records:** existing single-file records (YYYY-MM-DD_<topic>.md) are not
 retroactively split. They remain as-is for read-only reference. If reopened for
@@ -78,7 +78,7 @@ legacy conversion rule in the Update Instructions.
 
 ## Starting a New Topic
 
-When a new engineering topic begins, a new Workflow Record is created from the [template](../templates/AI_Workflow_Record_Template.md). The prior Workflow Record for the old topic is left in place - it is the permanent record of that decision.
+When a new engineering topic begins, a new Workflow Record is created from the [template](../docs/AI_Workflow_Record_Template.md). The prior Workflow Record for the old topic is left in place - it is the permanent record of that decision.
 
 ---
 
