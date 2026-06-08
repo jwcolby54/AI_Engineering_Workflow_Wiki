@@ -33,16 +33,6 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare MkDocs source
-        shell: bash
-        run: |
-          mkdir docs
-          cp README.md docs/start.md
-          cp index.md session_starter_template.md LICENSE docs/
-          cp -R concepts examples governance raw WorkflowRecords docs/
-          cp -R templates docs/workflow-templates
-          find docs -type f -name "*.md" -print0 | xargs -0 sed -i 's#templates/#workflow-templates/#g'
-
       - name: Build site
         run: mkdocs build --strict
 
