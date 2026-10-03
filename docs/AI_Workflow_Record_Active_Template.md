@@ -74,10 +74,14 @@ after a context clear:
 
 - Treat this file as the authoritative current workflow state.
 - Read this file first.
+- In a long-lived thread, use this file plus the current prompt as the primary
+  working context and ignore earlier chat discussion unless this file
+  explicitly requires it.
 - Do not read the paired history record unless the "Read History Only If"
   section explicitly instructs you to do so.
 - Do not load a starter file or other workflow artifacts for resume unless the
   Human explicitly asks for a full bootstrap or this active record requires it.
+- Do not reload or re-summarize the full thread by default.
 - After any prune event, print the absolute path to this active record as the
   Human's paste-ready resume artifact.
 

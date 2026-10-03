@@ -25,6 +25,63 @@ context. Summarize it in the relevant DesignFlow sections such as Objective,
 Scope, Constraints, Inputs and Evidence, Contract Decisions, Open Questions, or
 Drafting Notes.
 
+## Operating Rule - Active File Is the Context Anchor
+
+The active DesignFlow file exists to be the durable, low-noise resume artifact.
+When resuming work in a long-lived AI thread:
+
+- Treat the active DesignFlow file plus the current prompt as the primary
+  working context.
+- Do not rely on earlier chat discussion unless the active file explicitly
+  points back to it.
+- Do not reload or re-summarize the full thread by default.
+- Pull older deliberation only from the paired history file, and only when a
+  specific unresolved question requires it.
+
+If the Human wants a same-thread "soft clear," the correct instruction is:
+"Ignore earlier thread discussion and use only this active DesignFlow file plus
+the current prompt."
+
+## Operating Rule - History Is Archive, Not A Live Twin
+
+After a DesignFlow is split into Active and History files:
+
+- During ordinary design work, read and write the Active file only.
+- Do not mirror each new decision into the History file during the same working
+  flow.
+- Do not routinely read both files "just to be safe." If that becomes normal,
+  the split has failed.
+- The History file exists for archived material that has been pruned out of the
+  Active file, not as a second live companion log.
+
+Write to the History file only at a real prune/archive point, such as:
+
+- the Active file has become too large to resume quickly
+- a session has ended and older detail is no longer needed in Active
+- the Human explicitly asks for a history sync
+
+After pruning, the Active file must still be sufficient on its own for normal
+work. If an AI would need to read History routinely to continue, the Active file
+has been over-pruned and must be repaired before work continues.
+
+## Operating Rule - Split Naming And Authority
+
+When a DesignFlow grows large enough to split into current-state and history
+files, the naming convention is:
+
+- `<Topic>_Active.md` -- current implementation-facing truth
+- `<Topic>_History.md` -- full deliberation and superseded material
+
+Do not leave the old unsuffixed file as a second live DesignFlow document.
+If an unsuffixed file must remain for compatibility with old references, reduce
+it to a short redirect stub pointing to the Active and History files.
+
+After a split:
+
+- read the Active file first
+- read the History file only when the Active file or Human says it is needed
+- treat the Active file as the only authoritative current-state source
+
 ## Operating Rule - AI Setup Checklist
 
 When an AI is delegated to create a new DesignFlow instance and the Human has
@@ -46,7 +103,7 @@ cross-reference wiring that the Human must own.
 - Date started:
 - Last updated:
 - Status: Draft / In Progress / Frozen
-- Template master: [path to canonical DesignFlow template]
+- Template master: E:\AI\AI_Engineering_Workflow_Wiki\docs\DesignFlow_Template.md
 
 Note: keep the Template master line in every instance pointing to the canonical
 path. To update the standard, edit the template master. To work on a design

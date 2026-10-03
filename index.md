@@ -47,11 +47,13 @@ A durable knowledge and governance layer. It defines the workflow model, the rul
 - [Severity Definitions](concepts/Severity_Definitions.md) - BLOCKING / MAJOR / MINOR / FUTURE
 - [Scope Freeze](concepts/Scope_Freeze.md) - what it means and why it is non-negotiable
 - [Gate Model](concepts/Gate_Model.md) - the implementation gate and how approval works
+- [DesignFlow](concepts/DesignFlow.md) - lightweight design conversation mode; does not trigger full workflow machinery
 
 ### Operational Topics
 - [Operational Principles](concepts/Operational_Principles.md) - philosophy behind the design
 - [Context Management](concepts/Context_Management.md) - why chats are not records
 - [Artifact Structure](concepts/Artifact_Structure.md) - wiki vs workflow records vs source artifacts
+- [Secret Management Model](concepts/Secret_Management_Model.md) - LastPass / Vault / Windows keyring relationship; see `standards/shared_infrastructure_standards.md` for full mechanics
 
 ### Session Bootstrap
 - [Session Starter Template](session_starter_template.md) - the universal paste-in bootstrap
