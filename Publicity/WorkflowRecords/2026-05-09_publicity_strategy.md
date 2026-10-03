@@ -47,7 +47,7 @@ This workflow is not yet an article-writing workflow. It is a strategy and desig
 Requirements explicitly stated by the Human. These are not negotiable by AI systems.
 
 1. Start over from the prior mistaken setup.
-2. Do not use the generic `C:\Documents\New project` directory as the project base.
+2. Do not use the generic Documents-folder "New project" directory as the project base.
 3. Treat `E:\AI\AI_Engineering_Workflow_Wiki` as the real project repository.
 4. Start with a Workflow Record so thoughts are written down immediately.
 5. Decide whether the record belongs in existing `WorkflowRecords` before making other project structure.

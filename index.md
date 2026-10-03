@@ -1,3 +1,10 @@
+---
+type: index
+title: AI Engineering Workflow Wiki
+description: "Front door of the workflow wiki: paste the session starter first, then links to concepts, governance, templates and examples."
+tags: [AI_Engineering_Workflow_Wiki]
+---
+
 # AI Engineering Workflow Wiki
 
 The operational reference for the Human + multi-AI adversarial engineering workflow.

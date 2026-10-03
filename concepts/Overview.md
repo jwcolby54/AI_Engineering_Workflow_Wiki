@@ -1,3 +1,10 @@
+---
+type: concept
+title: Overview
+description: What the adversarial multi-AI workflow is, why it exists, and that Markdown artifacts, not chat logs, are its durable output.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Overview
 
 ## What This Workflow Is

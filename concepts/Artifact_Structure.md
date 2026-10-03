@@ -1,3 +1,10 @@
+---
+type: concept
+title: Artifact Structure
+description: The five artifact layers of the system, what each is for, the project bootstrap files, and Workflow Record filename conventions.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Artifact Structure
 
 Five layers of artifact exist in this system. Each serves a distinct purpose. They must not be mixed.

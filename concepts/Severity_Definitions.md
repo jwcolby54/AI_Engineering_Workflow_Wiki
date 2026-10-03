@@ -1,3 +1,10 @@
+---
+type: reference
+title: Severity Definitions
+description: The review severity levels and their meanings, used to stop endless review loops.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Severity Definitions
 
 Severity levels exist to prevent endless review loops. Without them, a trivial naming suggestion carries the same weight as a structural flaw, and convergence never happens.

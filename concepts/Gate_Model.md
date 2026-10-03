@@ -1,3 +1,10 @@
+---
+type: concept
+title: Gate Model
+description: "The implementation gate: the hard stop requiring approval from all three parties before any implementation begins."
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Gate Model
 
 ## What the Implementation Gate Is

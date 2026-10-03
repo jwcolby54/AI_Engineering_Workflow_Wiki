@@ -1,3 +1,10 @@
+---
+type: concept
+title: Secret Management Model
+description: How LastPass, Vault and the Windows keyring relate for secrets across projects that share local infrastructure.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Secret Management Model
 
 ## What This Is
@@ -43,7 +50,7 @@ JWC is a secure storage/retrieval point, never a generator of secret names
 or values, in either direction:
 
 - An **existing** secret gets requested by name (via
-  `E:\DevPython\LocalVaultOperator\vault_operator.py prompt-secret`) and
+  the Vault operator's `vault_operator.py prompt-secret` command) and
   JWC pastes it in from LastPass.
 - A **brand-new** secret -- which should be rare, since Vault's dynamic
   database credentials mean most projects never need a static password at
@@ -65,6 +72,7 @@ or values, in either direction:
 - `standards/shared_infrastructure_standards.md` -- full operational
   reference: exact `vault write` commands, the New Project Provisioning
   Runbook, and the MBQueue worked example this page summarizes.
-- `E:\DevPython\LocalVaultOperator\README.md` -- the shared Vault operator
-  tool's own design rules and secret-ID naming convention. Call it
-  directly; do not write a new wrapper script around it.
+- `E:\DevPython\_LocalVaultOperator` -- the shared Vault operator tool's folder
+  (renamed from LocalVaultOperator). As of 2026-10-03 only compiled `.pyc` files
+  remain there; the `vault_operator.py` source and its README were not found on
+  disk. Do not write a new wrapper script around the tool; restore the source first.

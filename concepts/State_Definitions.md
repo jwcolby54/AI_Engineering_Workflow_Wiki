@@ -1,3 +1,10 @@
+---
+type: reference
+title: State Definitions
+description: The valid machine-readable workflow states recorded in the Workflow Record header and what each state means.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # State Definitions
 
 Workflow state is recorded explicitly in the Workflow Record header and updated at each phase transition. States are machine-readable by design.

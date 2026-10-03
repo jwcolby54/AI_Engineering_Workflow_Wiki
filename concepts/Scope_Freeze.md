@@ -1,3 +1,10 @@
+---
+type: concept
+title: Scope Freeze
+description: How scope freeze prevents silent design drift between AI_1 proposals and AI_2 critiques.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Scope Freeze
 
 ## The Problem Scope Freeze Solves

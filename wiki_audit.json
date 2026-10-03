@@ -1,0 +1,28 @@
+{
+  "repos": [
+    {
+      "name": "AI_Engineering_Workflow_Wiki",
+      "wiki_root": "E:\\AI\\AI_Engineering_Workflow_Wiki",
+      "audit_exclude": [
+        ".claude/*",
+        "site/*",
+        "docs/concepts/*",
+        "docs/governance/*",
+        "docs/index.md",
+        "docs/session_starter_template.md"
+      ],
+      "frontmatter_exclude": [
+        "README.md",
+        "Publicity/*",
+        "skills/*",
+        "templates/*",
+        "raw/*",
+        "WorkflowRecords/*",
+        ".claude/*",
+        "site/*",
+        "docs/*"
+      ],
+      "frontmatter": "require"
+    }
+  ]
+}

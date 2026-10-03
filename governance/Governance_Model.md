@@ -1,3 +1,10 @@
+---
+type: concept
+title: Governance Model
+description: The three-party structured adversarial review structure and the role of the Human, AI_1 and AI_2.
+tags: [AI_Engineering_Workflow_Wiki, governance]
+---
+
 # Governance Model
 
 ## Structure

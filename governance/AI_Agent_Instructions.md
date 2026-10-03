@@ -1,3 +1,10 @@
+---
+type: procedure
+title: AI Agent Instructions
+description: "Behavioral obligations for an AI reading this at session start: read order, standards to load, workflow file locking, and gate rules."
+tags: [AI_Engineering_Workflow_Wiki, governance]
+---
+
 # AI Agent Instructions
 
 If you are an AI system reading this at the start of a session, this page defines your behavioral obligations for the duration of that session.

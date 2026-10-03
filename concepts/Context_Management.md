@@ -1,3 +1,10 @@
+---
+type: concept
+title: Context Management
+description: How externalized Workflow Records solve the ephemeral-chat problem, including the active/history two-file model.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Context Management
 
 ## The Core Problem

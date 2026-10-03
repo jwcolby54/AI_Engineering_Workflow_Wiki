@@ -1,3 +1,10 @@
+---
+type: concept
+title: Operational Principles
+description: "The principles behind the workflow design: chats are not records, different AIs have different blind spots, and commit to git at gate events."
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Operational Principles
 
 These principles explain why the workflow is designed the way it is. Understanding them is necessary to apply the workflow correctly in edge cases.

@@ -1,3 +1,10 @@
+---
+type: concept
+title: DesignFlow
+description: "What a DesignFlow is: a lightweight design conversation mode that does not trigger the full Workflow Record machinery."
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # DesignFlow
 
 ## What It Is

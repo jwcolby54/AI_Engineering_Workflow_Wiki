@@ -1,3 +1,10 @@
+---
+type: concept
+title: Workflow Model
+description: The full phase cycle of a workflow session from objective definition through proposal, critique, gate, implementation and validation.
+tags: [AI_Engineering_Workflow_Wiki, concepts]
+---
+
 # Workflow Model
 
 ## The Full Cycle

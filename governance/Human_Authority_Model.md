@@ -1,3 +1,10 @@
+---
+type: concept
+title: Human Authority Model
+description: Where the Human holds structural authority in the workflow and why the Human is not a rubber stamp.
+tags: [AI_Engineering_Workflow_Wiki, governance]
+---
+
 # Human Authority Model
 
 ## The Human Is Not a Rubber Stamp

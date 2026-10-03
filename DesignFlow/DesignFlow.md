@@ -1,3 +1,10 @@
+---
+type: procedure
+title: DesignFlow
+description: Portable DesignFlow scaffold an agentic AI follows to turn an unclear idea into a clear design artifact before implementation.
+tags: [AI_Engineering_Workflow_Wiki, DesignFlow]
+---
+
 # DesignFlow
 
 DesignFlow is a portable AI design scaffold for turning an unclear idea into a

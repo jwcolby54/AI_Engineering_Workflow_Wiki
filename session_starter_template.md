@@ -1,3 +1,10 @@
+---
+type: procedure
+title: Session Starter Template
+description: The vendor-neutral bootstrap message the Human pastes into any AI chat to start or resume a workflow session, in compact and full forms.
+tags: [AI_Engineering_Workflow_Wiki]
+---
+
 # Session Starter Template
 
 The session starter is the universal, vendor-neutral bootstrap. It works on any AI platform, in any session, regardless of whether a `CLAUDE.md` or `AGENTS.md` file exists.
