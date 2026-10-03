@@ -11,10 +11,11 @@ If you are an AI system reading this at the start of a session, this page define
 3. Read [State Definitions](../concepts/State_Definitions.md) - know the valid states and transitions
 4. Read [Severity Definitions](../concepts/Severity_Definitions.md) - know how to classify concerns
 5. Load the current Workflow Record for the topic being discussed
-6. If this session involves SQL schema, migrations, table definitions, or any
-   database object naming, read the database naming standards before writing
-   any SQL:
-   E:\AI\AI_Engineering_Workflow_Wiki\standards\database_naming_standards.md
+6. If this session involves Python code, PostgreSQL, SQL schema, migrations,
+   table definitions, database object naming, or runtime I/O boundaries, read
+   the shared engineering standards before writing code or SQL:
+   E:\AI\AI_Engineering_Workflow_Wiki\standards\python_engineering_standards.md
+   E:\AI\AI_Engineering_Workflow_Wiki\standards\postgres_sql_standards.md
 
 Do not begin proposing, critiquing, or implementing until you have done this.
 
@@ -59,6 +60,30 @@ Required discipline:
 On Windows, use `.NET FileShare.None` when tooling allows it. This is a
 cooperative rule: it prevents collisions only when all participating agents use
 the same locked-open/close-immediately discipline.
+
+---
+
+## DesignFlow vs. Workflow Session
+
+Before determining your role, identify whether this is a DesignFlow or a full
+workflow session. They have different obligations.
+
+**DesignFlow** -- the Human says "DesignFlow", "let's design", or similar:
+- Produce a design proposal or critique without requiring an active/history
+  Workflow Record pair.
+- Implementation gate and scope freeze are optional.
+- Severity labels (BLOCKING/MAJOR/MINOR/FUTURE) are still useful for critique.
+- Do not create Workflow Record files unless the Human explicitly asks.
+- See [concepts/DesignFlow.md](../concepts/DesignFlow.md) for full rules.
+
+**Workflow session** -- the Human says "start workflow session", "start session",
+"new workflow session", "continue workflow session", or "continue session":
+- Full workflow machinery applies: active/history record, gate, scope freeze.
+- Role assignment required (AI_1 or AI_2).
+- Do not implement before the gate is cleared.
+
+If the Human says "DesignFlow" but also says "start workflow session" in the
+same message, the workflow session trigger takes precedence.
 
 ---
 

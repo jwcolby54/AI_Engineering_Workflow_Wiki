@@ -27,20 +27,62 @@ Use ASCII replacements: `-`, `'`, `"`, `->`, `<-`, `<->`, `>=`, `<=`, `!=`,
 The workflow wiki lives at:
 [path to AI_Engineering_Workflow_Wiki]
 
-## At The Start of Every Engineering Session
+## Role Assignment For This Project
 
-Before proposing, critiquing, or implementing anything:
+In this project, role assignments are fixed:
 
-1. Read [path to AI_Engineering_Workflow_Wiki]\index.md
-2. Read [path to AI_Engineering_Workflow_Wiki]\governance\AI_Agent_Instructions.md
-3. Read [path to AI_Engineering_Workflow_Wiki]\concepts\State_Definitions.md
-4. Read [path to AI_Engineering_Workflow_Wiki]\concepts\Severity_Definitions.md
+- Claude (this AI) is always AI_1 -- the proposing / design AI.
+- Codex is always AI_2 -- the reviewing AI.
 
-Then ask the human:
-- Which role am I playing? (AI_1 proposing / AI_2 reviewing)
-- Which Workflow Record are we working on, or is this a new session?
+Do not ask the Human which role to play. The role is Claude = AI_1.
 
-Do not begin engineering work until you have confirmed role and record location.
+---
+
+## Session Startup Modes
+
+At the start of every session determine which mode applies before doing
+anything else.
+
+### Mode A - New Workflow Topic
+
+Triggered ONLY when the Human says one of these phrases (case-insensitive):
+  "start workflow session" / "start session" / "new workflow session"
+
+When triggered, read the wiki bootstrap files listed in AI_Agent_Instructions.md,
+then create three files:
+1. WorkflowRecords/YYYY-MM-DD_<name>.active.md
+2. WorkflowRecords/YYYY-MM-DD_<name>.history.md
+3. WorkflowRecords/<name>.md  (Codex starter, no date prefix)
+
+YYYY-MM-DD is today's date. <name> is the Human's session name verbatim
+with spaces replaced by underscores.
+
+### Mode B - Continuing Existing Work
+
+Use this mode when the Human does NOT say a Mode A trigger phrase.
+
+Look for the record by session name, then by most-recent modification date.
+Report current phase, gate status, open concerns, and next action before
+doing any new work. Do NOT create new Workflow Record files.
+
+### DesignFlow Is Not A Workflow Session
+
+DesignFlow work is not, by itself, a workflow session. If the Human asks to
+create, inspect, revise, or continue a DesignFlow, do not require a Workflow
+Record unless the Human also explicitly starts a workflow session.
+
+A DesignFlow is a design conversation between AIs (and the Human) to explore
+options before committing to a formal review cycle. It may produce a document
+or a Codex starter block, but it does not trigger active/history record
+creation or the implementation gate machinery unless the Human escalates it.
+
+See [path to AI_Engineering_Workflow_Wiki]\concepts\DesignFlow.md for details.
+
+### Naming Rule
+
+The session name given by the Human is the ONLY source for file names.
+Do NOT abbreviate, interpret, or invent a topic name. Use exact words, spaces
+replaced by underscores, case preserved.
 
 ## Post-Clear Minimal Resume Rule
 
