@@ -19,6 +19,8 @@ nav:
       - Gate Model: concepts/Gate_Model.md
       - Context Management: concepts/Context_Management.md
       - Artifact Structure: concepts/Artifact_Structure.md
+      - DesignFlow: concepts/DesignFlow.md
+      - Secret Management Model: concepts/Secret_Management_Model.md
   - Governance:
       - Governance Model: governance/Governance_Model.md
       - Human Authority Model: governance/Human_Authority_Model.md

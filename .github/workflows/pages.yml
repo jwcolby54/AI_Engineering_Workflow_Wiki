@@ -33,6 +33,9 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Generate docs tree from repo root
+        run: python tools/build_docs.py
+
       - name: Build site
         run: mkdocs build --strict
 
